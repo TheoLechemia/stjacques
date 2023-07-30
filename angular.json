@@ -22,10 +22,16 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "config.json.example",
+                "input": "src/config",
+                "output": "./config"
+             }
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/style.css"
             ],
             "scripts": []
           },
@@ -51,7 +57,8 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "assets": ["src/config"]
             }
           },
           "defaultConfiguration": "production"

@@ -1,0 +1,4 @@
+{
+    "API_ENDPOINT": "https://test.com",
+    "AUTH_TOKEN": "foo"
+}
