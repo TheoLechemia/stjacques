@@ -1,3 +1,28 @@
 .container {
       background-color: #e3e7e8!important;
 }
+
+#main-img-card {
+      height: 60vh;
+
+
+}
+
+.img-back {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+}
+
+
+.caroussel {
+      display: flex;
+      overflow-x: auto;
+
+}
+
+.caroussel img {
+      margin-right: 15px;
+      width: 10vh;
+    }

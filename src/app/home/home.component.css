@@ -1,0 +1,42 @@
+#home-img {
+    height: 60vh;
+    background-image: url("../../assets/home_img.jpg");
+    display: flex;
+    background-position: bottom;
+
+}
+
+.center {
+    text-align: center;
+}
+
+#home-title {
+    padding-top: 10rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 3.5rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#group-search {
+    height: 100%;
+}
+
+
+#main-search {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+#form_checkboxes {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#form_checkboxes label {
+    font-size: 1.5rem;
+}

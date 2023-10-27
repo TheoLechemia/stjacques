@@ -1,27 +1,67 @@
-<h3>La moinerie</h3>
 
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
-</p>
-<form class="row">
-    <div class="col-8">
-      <input type="text" class="form-control" id="free-search" placeholder="Nom, siècle, bidule...">
+<div id="home-img" class="mb-3">
+  <!-- <p id="home-title">
+    Patrimoine mobilier et immobilier, pèlerins, 
+personnages, confréries... liés à saint Jacques
+  </p> -->
+
+  <h1 id="home-title">
+    Patrimoine mobilier et immobilier, pèlerins, 
+    personnages, confréries... liés à saint Jacques
+  </h1>
+
+</div>
+<div class="container">
+<form>
+  <div class="row">
+    <h2 class="center" >Rechercher dans le patrimoine de Saint-Jacques </h2>
+  </div>
+  <div class="row mb-3">
+
+    <div class="col-10">
+      <div class="input-group" id="group-search">
+        <input class="form-control form-control-lg" id="search">
+        <span class="input-group-text" id="basic-addon1"> <mat-icon>search</mat-icon> </span>
+      </div>
     </div>
-    <div class="col-4">
-      <button type="submit" class="btn btn-success mb-3">Rechercher</button>
+    <div class="col-2 mt-2">
+      <button type="submit" class="btn btn-outline-dark btn-lg">Recherche avancée > </button>
     </div>
-  </form>
-
-<div class="row">
-
-    <div class="col-3 mb-2"  *ngFor="let i of [1,1,1,1,1,1,1,1,1,1]" > 
-        <div class="card">
-            <img src="https://stjacq.jnld.xyz/download/noco/StJACQ/TestMedias/image/QHzdH5ie6VEySMq67A.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a [routerLink]="['/detail/1']" routerLinkActive="router-link-active"  class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
+  </div>
+  <div id="form_checkboxes" class="mb-3">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="monu_lieux" value="option1">
+      <label class="form-check-label" for="monu_lieux">Monuments & Lieux</label>
     </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="mobilier_image" value="option2">
+      <label class="form-check-label" for="mobilier_image">Mobiliers & Images</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="pers_physique" value="option3">
+      <label class="form-check-label" for="pers_physique">Personnes Physiques</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="pers_morale" value="option3">
+      <label class="form-check-label" for="pers_morale">Personnes Morales</label>
+    </div>
+  </div>
+</form>
+  
+<h3 class="center">Patrimoines à découvrir</h3>
+  <div class="row">
+  
+      <div class="col-md-3 col-sm-6 col-xs-12 mb-2"  *ngFor="let i of [1,1,1,1]" > 
+          <div class="card">
+              <img src="https://stjacq.jnld.xyz/download/noco/StJACQ/TestMedias/image/QHzdH5ie6VEySMq67A.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a [routerLink]="['/detail/1']" routerLinkActive="router-link-active"  class="btn btn-primary">Voir la fiche</a>
+              </div>
+          </div>
+      </div>
+  </div>
+
 </div>
