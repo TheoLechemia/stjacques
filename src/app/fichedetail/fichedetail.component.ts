@@ -14,8 +14,7 @@ export class FichedetailComponent implements OnInit {
     window.scroll(0, 0);
 
     for (let i = 1; i <= 8; i++) {
-      const src =
-        'https://stjacq.jnld.xyz/dltemp/dfP2gVHiBDoW5tVN/1699648200000/noco/Patrimoine%20Jacquaire/TMedias/CheminMedia/oyTz5c8E1XUpsEjmuJ.png';
+      const src = 'https://material.angular.io/assets/img/examples/shiba2.jpg';
       const img = {
         src: src,
       };
