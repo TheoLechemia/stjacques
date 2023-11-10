@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AppConfigService } from './app.config.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -14,9 +14,16 @@ export class ApiService {
   ) {
     this.API_ENDPOINT = this.configService.config.API_ENDPOINT;
   }
-  public fetchObjects(): Observable<any> {
+  public getObjects(endpoint: string, params:any= {}): Observable<any> {
+    let queryString = new HttpParams();
+    // eslint-disable-next-line guard-for-in
+    for (const key in params) {
+      queryString = queryString.set(key, params[key].toString());
+    }
     return this.http.get(
-      `${this.API_ENDPOINT}/api/v1/db/data/v1/StJACQ/TPersMorales/views/TPersMorales`
+      `${this.API_ENDPOINT}/api/v1/db/data/v1/StJACQ/${endpoint}`, {
+        params: queryString,
+      }
     );
   }
 }

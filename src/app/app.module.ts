@@ -7,6 +7,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppConfigService } from './app.config.service';
 import {MatIconModule} from '@angular/material/icon';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSelectModule} from '@angular/material/select';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 import { LightboxModule } from 'ngx-lightbox';
 
@@ -16,10 +27,12 @@ import { HomeComponent } from './home/home.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthentInterceptor } from './http.interceptor.service';
+import { PatriCardComponent } from './patri-card/patri-card.component';
+import { MunicipalityComponent } from './municipality/municipality.component';
 
 @NgModule({
-  declarations: [AppComponent, FichedetailComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, MatIconModule, CommonModule, HttpClientModule, MatInputModule, LightboxModule],
+  declarations: [AppComponent, FichedetailComponent, HomeComponent, PatriCardComponent, MunicipalityComponent],
+  imports: [BrowserModule,BrowserAnimationsModule, ReactiveFormsModule, AppRoutingModule,MatFormFieldModule, MatDividerModule, MatIconModule, CommonModule, MatSelectModule, HttpClientModule, MatButtonModule, MatInputModule, LightboxModule, MatCardModule, MatChipsModule, MatListModule],
   providers: [
     {
       provide: APP_INITIALIZER,

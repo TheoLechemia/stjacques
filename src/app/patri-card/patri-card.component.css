@@ -1,0 +1,42 @@
+.imgAutoWidth {
+    width: auto!important;
+}
+
+.hover-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    color: white;
+    background-color: #393939b8;
+    cursor: pointer;
+    display: block;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+
+}
+.btn-link-sheet {
+    bottom: 2%;
+    right: 2%;
+    position: absolute
+}
+
+.hover-wrapper:hover {
+    opacity: 1;
+}
+
+.hover-btn {
+    background-color: white!important;
+}
+
+mat-card-actions {
+    display: visible;
+}
+
+@media (min-width: 768px) {
+    mat-card-actions{
+        display: none;
+    }
+}
+
+

@@ -10,15 +10,38 @@
     text-align: center;
 }
 
+.center-div {
+    width: 25%;
+    margin: 0 auto;
+}
+
 #home-title {
     padding-top: 10rem;
     color: white;
     font-weight: bold;
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    #home-title {
+        font-size : 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    #home-title {
+        font-size : 2.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #home-title {
+        font-size : 3rem;
+    }
 }
 
 #group-search {

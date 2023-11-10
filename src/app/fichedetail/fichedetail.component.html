@@ -2,44 +2,151 @@
 
   <div class="row mt-2">
       <div class="col-lg-4 col-sm-6 col-xs-12">
-          <div class="card mb-3" >
-                <div (click)="open(1)" class="col-md-12 img-back" id="main-img-card" style="background-image: url('https://stjacq.jnld.xyz/download/noco/StJACQ/TestMedias/image/QHzdH5ie6VEySMq67A.jpg');">
-              </div>
-          </div>
-      </div>
-  
-      <div class="col-lg-8 col-sm-6 col-xs-12">
-          <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
+        <div class="row">
+          <div class="col">
+            <div class="card mb-3" >
+                  <div (click)="open(1)" class="col-md-12 img-back" id="main-img-card" style="background-image: url('https://stjacq.jnld.xyz/dltemp/dfP2gVHiBDoW5tVN/1699648200000/noco/Patrimoine%20Jacquaire/TMedias/CheminMedia/oyTz5c8E1XUpsEjmuJ.png');">
+                </div>
             </div>
-      </div>
-  
-  </div>
-  
-  <div class="row">
-    <div class="col-lg-4 col-sm-6 col-xs-12">
-      <div class="row">
-        <div class="col-12">
-          <div class="caroussel">
-            <img *ngFor="let _img of album; let index=index" (click)="open(index)" src="https://stjacq.jnld.xyz/download/noco/StJACQ/TestMedias/image/QHzdH5ie6VEySMq67A.jpg" alt="Bhutan" />
           </div>
         </div>
-    
-  
-    </div>
-  </div>
-  
-  
+        <div class="row">
+          <div class="col">
+              <div class="caroussel">
+                <img *ngFor="let _img of album; let index=index" (click)="open(index)" src="https://stjacq.jnld.xyz/dltemp/dfP2gVHiBDoW5tVN/1699648200000/noco/Patrimoine%20Jacquaire/TMedias/CheminMedia/oyTz5c8E1XUpsEjmuJ.png" />
+              </div>
+          </div>
+        </div>
+      </div>
 
   
+      <div class="col-lg-8 col-sm-6 col-xs-12">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-subtitle>
+              <div class="mb-1">
+                <mat-icon class="center-verticaly">image</mat-icon>
+                Catégorie
+            </div>  
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="horizontaly-center">
+              <h1>Title</h1>
+              <h3>Sub title</h3>
+            </div>
+            <mat-divider width="20"></mat-divider>
+
+            <mat-list>
+              <mat-list-item>
+                <mat-icon matListItemIcon>signpost</mat-icon>
+                <div matListItemTitle>Siècle</div>
+                <div matListItemLine>18eme</div>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon matListItemIcon>map</mat-icon>
+                <div matListItemTitle>Localité</div>
+                <div matListItemLine> Là </div>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon matListItemIcon>map</mat-icon>
+                <div matListItemTitle>Etat de conservatio </div>
+                <div matListItemLine> Moyen </div>
+              </mat-list-item>
+          </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col">
+          <mat-card>
+            <mat-card-content>
+              HISTOIRE : <br>
+              Sed at ligula in erat bibendum pulvinar ac a purus. Nunc eu sollicitudin quam. Cras semper tortor tellus, eu accumsan ligula finibus nec.
+          Integer vitae purus magna. Nulla vel ex purus. Quisque erat augue, sodales at porta et, interdum ut ligula. Sed sit amet metus nibh. Nullam luctus
+          scelerisque diam, sed ornare erat rutrum at. Nunc imperdiet congue ipsum egestas hendrerit.
   
+          <br>
+          DESCRIPTION : <br>
+          Cras id finibus arcu. Duis varius lobortis nunc, ut posuere odio varius vel. Phasellus dapibus pretium arcu, pulvinar maximus orci
+  ullamcorper in. Pellentesque tincidunt ipsum sit amet sollicitudin scelerisque. Curabitur nec elit vulputate, tristique magna a, fringilla metus. Nam
+  accumsan elit a orci tristique, non laoreet tellus interdum. Fusce finibus, justo at molestie condimentum, quam urna iaculis eros, nec fringilla tellus
+  ipsum sit amet nibh. Morbi iaculis elit ipsum, ac tincidunt ex sodales at. Quisque faucibus accumsan turpis eu finibus. Vivamus sit amet libero velit.
+  Cras libero ligula, accumsan sed pellentesque aliquet, ultrices vitae tortor. Cras condimentum elementum massa vel tristique. Curabitur ut mi
+  commodo, dictum dolor id, maximus mauris.
+  <mat-divider class="mt-3 mb-3"></mat-divider>
+
+  <p>
+   <b>Source :  </b> xxx <br>
+
+ <b> Bibliographie :</b> xxx <br>
+
+ <b> Date Creation de la fiche :</b>  xxx <br>
+
+ <b> Date Maj de la fiche : </b>  xxx <br>
+
+ <b> Redacteur : </b>  xxx <br>
+
+<b>Contributeur :</b>  xxx <br>
+
+<b> N° Fiche :</b>  xxx
+  </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+      </div>
+
+
+
   
+  </div>
   
+  <div class="row" id="lightBoxRow">
+
+  </div>
+
+
+  <div class="row mt-3">
+    <div class="col-12">
+      <div class="card">
+        <h2 class="card-header">  Fiches liées</h2>
+        <div class="card-body detail-body">
+          <div class="mt-2">
+            <h4>Monuments & lieux</h4>
+            <div class="caroussel">
+              <app-patri-card class="mb-2" *ngFor="let i of [1,1,1,1, 1,1,1,1,1,1,1,1,1,1,1]"></app-patri-card>
+            </div>
+          </div>
+          <div class="mt-2">
+            <h4>Mobiliers & Images</h4>
+            <div class="caroussel">
+              <app-patri-card class="mb-2" *ngFor="let i of [1,1,1,1, 1,1,1,1,1]"></app-patri-card>
+            </div>
+          </div>
+          <div class="mt-2">
+            <h4>Mobiliers & Images</h4>
+            <div class="caroussel">
+              <app-patri-card class="mb-2" *ngFor="let i of [1,1,1,1, 1,1,1,1,1]"></app-patri-card>
+            </div>
+          </div>
+          <div class="mt-2">
+            <h4>Personnes Physiques</h4>
+            <div class="caroussel">
+              <app-patri-card class="mb-2" *ngFor="let i of [1,1,1,1, 1,1,1,1,1]"></app-patri-card>
+            </div>
+          </div>
+          <div class="mt-2">
+            <h4>Personnes Morales</h4>
+            <div class="caroussel">
+              <app-patri-card class="mb-2" *ngFor="let i of [1,1,1,1, 1,1,1,1,1]"></app-patri-card>
+            </div>
+          </div>
+
+        </div>
+  
+      </div>
+    </div>
   </div>
 </div>

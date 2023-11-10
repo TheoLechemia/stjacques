@@ -21,7 +21,7 @@ export class AuthentInterceptor implements HttpInterceptor {
       request = request.clone({
         headers: new HttpHeaders({
           'Content-Type': 'application/json',
-          'xc-auth': this.configService.config.AUTH_TOKEN,
+          'xc-token': this.configService.config.API_TOKEN,
         }),
       });
     }

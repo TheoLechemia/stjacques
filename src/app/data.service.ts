@@ -6,11 +6,16 @@ import { ApiService } from './api.service';
 })
 export class DataService {
   public objects: any;
+  public countries: any;
+  public centuries: any;
   constructor(private api: ApiService) {
-    this.api.fetchObjects().subscribe((data) => {
-      console.log('wopppp', data);
 
-      this.objects = data;
-    });
+    this.api.getObjects("LocPays", {limit: 200}).subscribe((data => {      
+      this.countries = data.list
+    }));
+
+    this.api.getObjects("BibSiecle", {limit:200}).subscribe((data => {            
+      this.centuries = data.list
+    }));
   }
 }
