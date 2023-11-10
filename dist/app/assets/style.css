@@ -1,0 +1,12 @@
+body {
+    background-color: #e3e7e8;
+}
+
+
+.center-verticaly {
+    vertical-align: middle;
+
+}
+.horizontaly-center {
+    text-align: center;
+}
