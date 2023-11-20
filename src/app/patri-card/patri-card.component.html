@@ -5,9 +5,9 @@
     <div class="hover-wrapper p-2">
         <div class="mb-1">
             <mat-icon class="center-verticaly">image</mat-icon>
-            Catégorie
+            {{data.categorie}}
         </div>
-        <h4>Card title</h4>
+        <h4> {{data.title}} </h4>
         <mat-chip-set
           class="example-chip mt-2"
           cdkDropList 
@@ -17,24 +17,23 @@
                       label
               </mat-chip>
         </mat-chip-set>
-        <a class="btn-link-sheet" mat-fab extended [routerLink]="['/detail/1']">
+        <a class="btn-link-sheet" mat-fab extended (click)="nagigateToDetail(data.id)">
           <mat-icon>info</mat-icon>
           En savoir plus
         </a>
-        <!-- <a [routerLink]="['/detail/1']" routerLinkActive="router-link-active"  class="btn btn-primary btn-link-sheet">Voir la fiche</a> -->
 
     </div>
     <mat-card-header>
-      <mat-card-title>Title</mat-card-title>
-      <mat-card-subtitle>Catégorie</mat-card-subtitle>
+      <mat-card-title> {{data.title}} </mat-card-title>
+      <mat-card-subtitle> {{data.categorie}} </mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-
+    <img  mat-card-image *ngIf="data.medias && data.medias.length > 0" src="{{data.medias[0].url}}&h=150&w=150">
     <mat-card-actions>
 
-            <a class="btn-link-sheet" mat-fab extended [routerLink]="['/detail/1']">
+            <a class="btn-link-sheet" mat-fab extended (click)="nagigateToDetail(data.id)">
                 <mat-icon>info</mat-icon>
                 En savoir plus
+                
               </a>
     
     </mat-card-actions>

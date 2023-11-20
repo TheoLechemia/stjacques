@@ -5,14 +5,14 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: 'detail/:id_fiche',
+    path: 'detail/:categorie/:id_fiche',
     component: FichedetailComponent,
   },
   { path: '', component: HomeComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes) ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

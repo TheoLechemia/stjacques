@@ -5,19 +5,17 @@ import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-municipality',
   templateUrl: './municipality.component.html',
-  styleUrls: ['./municipality.component.css']
+  styleUrls: ['./municipality.component.css'],
 })
-export class MunicipalityComponent implements OnInit{
-  constructor(public api: ApiService) {  }
+export class MunicipalityComponent implements OnInit {
+  constructor(public api: ApiService) {}
   @Input() parentFormControl: FormControl;
   public municipalities: Array<any> = [];
 
   ngOnInit(): void {
-    this.api.getObjects("LocCommunes").subscribe(data => {      
-      this.municipalities = data.list;
-      console.log(this.municipalities);
-      
-    })
+    // this.api.getObjects("LocCommunes").subscribe(data => {
+    //   this.municipalities = data.list;
+    //   console.log(this.municipalities);
+    // })
   }
-
 }

@@ -8,22 +8,31 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   public API_ENDPOINT: string;
+  public INTERNAL_API_ENDPOINT: string;
   constructor(
     private configService: AppConfigService,
     private http: HttpClient
   ) {
     this.API_ENDPOINT = this.configService.config.API_ENDPOINT;
+    this.INTERNAL_API_ENDPOINT =
+      this.configService.config.INTERNAL_API_ENDPOINT;
   }
-  public getObjects(endpoint: string, params:any= {}): Observable<any> {
+  public getObjects(
+    endpoint: string,
+    params: any = {},
+    fields = [],
+    sort = 'asc'
+  ): Observable<any> {
     let queryString = new HttpParams();
     // eslint-disable-next-line guard-for-in
     for (const key in params) {
-      queryString = queryString.set(key, params[key].toString());
+      // const [operator, value] = params[key].split(',');
+      // const formatedFilter = `(${key},${operator},${value})`;
+      queryString = queryString.append(key, params[key]);
     }
-    return this.http.get(
-      `${this.API_ENDPOINT}/api/v1/db/data/v1/StJACQ/${endpoint}`, {
-        params: queryString,
-      }
-    );
+    // always retreive publish data
+    return this.http.get(`${this.INTERNAL_API_ENDPOINT}/${endpoint}`, {
+      params: queryString,
+    });
   }
 }
