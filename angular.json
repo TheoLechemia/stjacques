@@ -60,7 +60,7 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true,
-              "assets": ["src/config"]
+              "assets": ["src/config", "src/assets"]
             }
           },
           "defaultConfiguration": "production"

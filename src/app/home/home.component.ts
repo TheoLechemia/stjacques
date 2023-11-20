@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   loadRandom() {
+    this.randomCards = [];
     [
       'monuments_lieux',
       'mobiliers_images',
@@ -31,9 +32,12 @@ export class HomeComponent implements OnInit {
           limit: 2,
           random: 'true',
           fields: 'medias',
+          has_medias: true,
         })
         .subscribe((data) => {
-          this.randomCards.push(data);
+          console.log(data);
+
+          this.randomCards.push(...data);
         });
     });
   }

@@ -1,6 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+// MAPPING = {
+//   ""
+// }
+
 @Component({
   selector: 'app-patri-card',
   templateUrl: './patri-card.component.html',
@@ -13,7 +17,7 @@ export class PatriCardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  nagigateToDetail(id: number) {
-    this._router.navigate(['detail', 'monuments_lieux', id]);
+  nagigateToDetail(id: number, categorie: string) {
+    this._router.navigate(['detail', categorie, id]);
   }
 }

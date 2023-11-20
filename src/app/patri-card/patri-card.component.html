@@ -1,40 +1,23 @@
 
 
 
-<mat-card class="example-card">
-    <div class="hover-wrapper p-2">
-        <div class="mb-1">
-            <mat-icon class="center-verticaly">image</mat-icon>
-            {{data.categorie}}
-        </div>
-        <h4> {{data.title}} </h4>
-        <mat-chip-set
-          class="example-chip mt-2"
-          cdkDropList 
-          cdkDropListOrientation="horizontal">
-              <mat-chip         
-              *ngFor="let cat of [1,1,1,1,] ">
-                      label
-              </mat-chip>
-        </mat-chip-set>
-        <a class="btn-link-sheet" mat-fab extended (click)="nagigateToDetail(data.id)">
-          <mat-icon>info</mat-icon>
-          En savoir plus
-        </a>
+<mat-card class="clickable-card" (click)="nagigateToDetail(data.id, data.meta_categorie)">
+  <mat-card-header>
+    <mat-card-title> {{data.title || data.prenom_nom_pers_phy}} </mat-card-title>
+    <mat-card-subtitle> {{data.categorie}} </mat-card-subtitle>
+    <!-- <mat-chip-set
+      class="example-chip mt-2"
+      cdkDropList 
+      cdkDropListOrientation="horizontal">
+      <mat-chip         
+      *ngFor="let cat of [1,1,1,1,] ">
+      label
+    </mat-chip>
+  </mat-chip-set> -->
+</mat-card-header>
 
-    </div>
-    <mat-card-header>
-      <mat-card-title> {{data.title}} </mat-card-title>
-      <mat-card-subtitle> {{data.categorie}} </mat-card-subtitle>
-    </mat-card-header>
-    <img  mat-card-image *ngIf="data.medias && data.medias.length > 0" src="{{data.medias[0].url}}&h=150&w=150">
-    <mat-card-actions>
+<img  mat-card-image *ngIf="data.medias && data.medias.length > 0" src="{{data.medias[0].url}}&h=150&w=150">
+<img width="25" class="ico" src="assets/ico_{{data.meta_categorie}}.png" alt="">
 
-            <a class="btn-link-sheet" mat-fab extended (click)="nagigateToDetail(data.id)">
-                <mat-icon>info</mat-icon>
-                En savoir plus
-                
-              </a>
-    
-    </mat-card-actions>
+
   </mat-card>
