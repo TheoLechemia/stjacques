@@ -29,9 +29,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthentInterceptor } from './http.interceptor.service';
 import { PatriCardComponent } from './patri-card/patri-card.component';
 import { MunicipalityComponent } from './municipality/municipality.component';
+import { SearchComponent } from './search/search.component';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
-  declarations: [AppComponent, FichedetailComponent, HomeComponent, PatriCardComponent, MunicipalityComponent],
+  declarations: [AppComponent, FichedetailComponent, HomeComponent, PatriCardComponent, MunicipalityComponent, SearchComponent, ResultsComponent],
   imports: [BrowserModule,BrowserAnimationsModule, ReactiveFormsModule, AppRoutingModule,MatFormFieldModule, MatDividerModule, MatIconModule, CommonModule, MatSelectModule, HttpClientModule, MatButtonModule, MatInputModule, LightboxModule, MatCardModule, MatChipsModule, MatListModule],
   providers: [
     {

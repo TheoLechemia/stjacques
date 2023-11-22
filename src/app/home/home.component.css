@@ -10,11 +10,6 @@
     text-align: center;
 }
 
-.center-div {
-    width: 25%;
-    margin: 0 auto;
-}
-
 #home-title {
     padding-top: 10rem;
     color: white;
@@ -24,6 +19,10 @@
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.mat-icon {
+    overflow: visible!important;
 }
 
 @media (min-width: 768px) {

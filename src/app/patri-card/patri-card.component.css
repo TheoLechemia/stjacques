@@ -3,7 +3,9 @@
 }
 
 .ico {
-    position: absolute
+    position: absolute;
+    left: 3%;
+    top: 2%;
 }
 
 .hover-wrapper {

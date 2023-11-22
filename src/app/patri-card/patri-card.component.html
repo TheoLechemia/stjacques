@@ -2,9 +2,11 @@
 
 
 <mat-card class="clickable-card" (click)="nagigateToDetail(data.id, data.meta_categorie)">
+  <img  mat-card-image *ngIf="data.medias && data.medias.length > 0" src="{{data.medias[0].url}}&h=150&w=150">
+  <img width="25" class="ico" src="assets/ico_{{data.meta_categorie}}.png" alt="">
   <mat-card-header>
-    <mat-card-title> {{data.title || data.prenom_nom_pers_phy}} </mat-card-title>
     <mat-card-subtitle> {{data.categorie}} </mat-card-subtitle>
+    <mat-card-title> {{data.title || data.prenom_nom_pers_phy}} </mat-card-title>
     <!-- <mat-chip-set
       class="example-chip mt-2"
       cdkDropList 
@@ -16,8 +18,6 @@
   </mat-chip-set> -->
 </mat-card-header>
 
-<img  mat-card-image *ngIf="data.medias && data.medias.length > 0" src="{{data.medias[0].url}}&h=150&w=150">
-<img width="25" class="ico" src="assets/ico_{{data.meta_categorie}}.png" alt="">
 
 
   </mat-card>

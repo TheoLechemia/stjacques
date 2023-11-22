@@ -1,0 +1,14 @@
+.white {
+    color:white!important
+}
+
+.navbar.navbar-inverse .navbar-header .navbar-brand {
+    display: block;
+    text-align:center;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar.navbar-inverse .navbar-header{
+float: none; 
+}

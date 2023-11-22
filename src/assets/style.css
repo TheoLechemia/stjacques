@@ -1,7 +1,10 @@
 body {
-    background-color: #e3e7e8;
+    background-color: #EAE5D4;
 }
 
+.primary-bg-color {
+    background-color: #8C101C;
+}
 
 .center-verticaly {
     vertical-align: middle;
@@ -13,4 +16,21 @@ body {
 
 .bold {
     font-weight: bold;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #8C101C;
+    --bs-btn-border-color: #8C101C;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #850f1b;
+    --bs-btn-hover-border-color: #850f1b;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #850f1b;
+    --bs-btn-active-border-color: #850f1b;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #8C101C;
+    --bs-btn-disabled-border-color: #8C101C;
 }
