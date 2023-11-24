@@ -21,6 +21,10 @@
     margin-right: auto;
 }
 
+#refresh-icon {
+    margin-right: 10px;
+}
+
 .mat-icon {
     overflow: visible!important;
 }

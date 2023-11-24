@@ -68,40 +68,22 @@ personnages, confréries... liés à saint Jacques
   </div>
 
 </div>
-  
-<h3 class="center mb-3">Patrimoines à découvrir</h3>
-  <div class="row">
-    
-      <div class="col-md-3 col-sm-6 col-xs-12 mb-2"  *ngFor="let data of randomCards" > 
-        <app-patri-card [data]="data"></app-patri-card>
-      </div>
-      <div class="center-div mt-2">
-        <button (click)="loadRandom()" mat-fab extended color="accent">
-          <mat-icon>refresh</mat-icon>
-          Actualiser
-        </button>
-      </div>
-  </div>
 
-
-  <h2>Form</h2>
-
-  <mat-form-field>
-    <mat-label>Pays</mat-label>
-    <mat-select [formControl]="formService.form.get('countries')" multiple>
-      <mat-option *ngFor="let country of dataService.countries" [value]="country.IdPays">{{country.NomPays}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field>
-
-  <mat-label>Siècles</mat-label>
-  <mat-select [formControl]="formService.form.get('centuries')" multiple>
-    <mat-option *ngFor="let century of dataService.centuries" [value]="century.IdSiecle">{{century.SiecleList}}</mat-option>
-  </mat-select>
-</mat-form-field>
-
-<app-municipality [parentFormControl]="formService.form.get('municipalities')"></app-municipality>
+<div class="primary-bg-color px-3 pb-3" id="random-block">
+  <h3 class="center py-3 white ">Patrimoines à découvrir</h3>
+    <div class="row">
+      
+        <div class="col-md-3 col-sm-6 col-xs-12 mb-2"  *ngFor="let data of randomCards" > 
+          <app-patri-card [data]="data"></app-patri-card>
+        </div>
+        <div class="center-div mt-2">
+          <button (click)="loadRandom()"  class="btn btn-primary">
+            <mat-icon id="refresh-icon" class="fs-1">refresh</mat-icon>  <br>
+            Actualiser
+          </button>
+        </div>
+    </div>
+</div>
 
 
 </div>
