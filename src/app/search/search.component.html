@@ -58,7 +58,7 @@
           <mat-form-field class="col-sm-3 col-xs-12">
             <mat-label>Siècle</mat-label>
             <mat-select [formControl]="formService.form.get('general')?.get('siecles')" multiple>
-              <mat-option *ngFor="let country of dataService.countries" [value]="country.IdPays">{{country.NomPays}}</mat-option>
+              <mat-option *ngFor="let siecle of dataService.siecles" [value]="siecle.id">{{siecle.name}}</mat-option>
             </mat-select>
           </mat-form-field>
         </div>
@@ -75,13 +75,13 @@
           <mat-form-field class="col-sm-3 col-xs-12">
             <mat-label>Nature</mat-label>
             <mat-select [formControl]="formService.form.get('monuments_lieux')?.get('nature')" multiple>
-              <mat-option *ngFor="let country of dataService.countries" [value]="country.IdPays">{{country.NomPays}}</mat-option>
+              <mat-option *ngFor="let item of dataService.naturesMonu" [value]="item.id">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field class="col-sm-3 col-xs-12">
             <mat-label>Etat de conservation</mat-label>
             <mat-select [formControl]="formService.form.get('monuments_lieux')?.get('etat_conservation')" multiple>
-              <mat-option *ngFor="let country of dataService.countries" [value]="country.IdPays">{{country.NomPays}}</mat-option>
+              <mat-option *ngFor="let item of dataService.etatsConservations" [value]="item.id">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -99,19 +99,19 @@
           <mat-form-field class="col-sm-6 col-xs-12">
             <mat-label>Désignation</mat-label>
             <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('designation')" multiple>
-              <mat-option *ngFor="let country of dataService.countries" [value]="country.IdPays">{{country.NomPays}}</mat-option>
+              <mat-option *ngFor="let item of dataService.designationsMob" [value]="item.id">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field class="col-sm-6 col-xs-12">
             <mat-label>Technique</mat-label>
             <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('technique')" multiple>
-              <mat-option *ngFor="let country of dataService.countries" [value]="country.IdPays">{{country.NomPays}}</mat-option>
+              <mat-option *ngFor="let item of dataService.techniquesMob" [value]="item.id">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field class="col-sm-6 col-xs-12">
             <mat-label>Etat de conservation</mat-label>
             <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('etat_conservation')" multiple>
-              <mat-option *ngFor="let country of dataService.countries" [value]="country.IdPays">{{country.NomPays}}</mat-option>
+              <mat-option *ngFor="let item of dataService.etatsConservations" [value]="item.id">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -129,7 +129,7 @@
           <mat-form-field class="col-sm-6 col-xs-12">
             <mat-label>Nature</mat-label>
             <mat-select [formControl]="formService.form.get('personnes_morales')?.get('natures')" multiple>
-              <mat-option *ngFor="let country of dataService.countries" [value]="country.IdPays">{{country.NomPays}}</mat-option>
+              <mat-option *ngFor="let item of dataService.naturesPersoMo" [value]="item.id">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -147,13 +147,13 @@
           <mat-form-field class="col-sm-6 col-xs-12">
             <mat-label>Profession</mat-label>
             <mat-select [formControl]="formService.form.get('personnes_physiques')?.get('professions')" multiple>
-              <mat-option *ngFor="let country of dataService.countries" [value]="country.IdPays">{{country.NomPays}}</mat-option>
+              <mat-option *ngFor="let item of dataService.professions" [value]="item.id">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field class="col-sm-6 col-xs-12">
             <mat-label>Mode de déplacement</mat-label>
             <mat-select [formControl]="formService.form.get('personnes_physiques')?.get('mode_deplacement')" multiple>
-              <mat-option *ngFor="let country of dataService.countries" [value]="country.IdPays">{{country.NomPays}}</mat-option>
+              <mat-option *ngFor="let item of dataService.deplacements" [value]="item.id">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -169,7 +169,7 @@
 <mat-form-field>
     <mat-label>Pays</mat-label>
     <mat-select [formControl]="formService.form.get('countries')" multiple>
-      <mat-option *ngFor="let country of dataService.countries" [value]="country.IdPays">{{country.NomPays}}</mat-option>
+      <mat-option *ngFor="let item of dataService.countries" [value]="item.id">{{item.name}}</mat-option>
     </mat-select>
   </mat-form-field>
 

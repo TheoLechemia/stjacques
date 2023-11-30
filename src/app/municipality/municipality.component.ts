@@ -33,13 +33,12 @@ export class MunicipalityComponent implements OnInit {
         distinctUntilChanged()
       )
       .subscribe((value) => {
-        console.log('YEP value', value);
         this.api
           .getObjects('communes', { limit: 50, name: value })
           .subscribe((data) => {
             this.municipalities = [];
-            this.municipalities.push(...this.selectedMunicipalities);
             this.municipalities = data;
+            this.municipalities.push(...this.selectedMunicipalities);
           });
       });
   }
