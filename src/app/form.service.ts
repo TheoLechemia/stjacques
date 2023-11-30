@@ -8,6 +8,12 @@ export class FormService {
   public form: FormGroup;
   constructor(private _formBuilder: FormBuilder) {
     this.form = this._formBuilder.group({
+      searchOn: this._formBuilder.group({
+        monuments_lieux: true,
+        mobiliers_images: true,
+        personnes_morales: true,
+        personnes_physiques: true,
+      }),
       general: this._formBuilder.group({
         pays: null,
         regions: null,
@@ -16,20 +22,20 @@ export class FormService {
         siecles: null,
       }),
       monuments_lieux: this._formBuilder.group({
-        nature: null,
-        etat_conservation: null,
+        natures_monu: null,
+        etats_conservations: null,
       }),
       mobiliers_images: this._formBuilder.group({
         designation: null,
-        technique: null,
-        etat_conservation: null,
+        techniques: null,
+        etats_conservations: null,
       }),
       personnes_morales: this._formBuilder.group({
-        natures: null,
+        natures_pers: null,
       }),
       personnes_physiques: this._formBuilder.group({
         professions: null,
-        mode_deplacement: null,
+        modes_deplacement: null,
       }),
     });
   }
