@@ -15,27 +15,27 @@ export class FormService {
         personnes_physiques: true,
       }),
       general: this._formBuilder.group({
-        pays: null,
-        regions: null,
-        departements: null,
-        communes: null,
-        siecles: null,
+        pays: [[]],
+        regions: [[]],
+        departements: [[]],
+        communes: [[]],
+        siecles: [[]],
       }),
       monuments_lieux: this._formBuilder.group({
-        natures_monu: null,
-        etats_conservations: null,
+        natures_monu: [[]],
+        etats_conservation: [[]],
       }),
       mobiliers_images: this._formBuilder.group({
-        designation: null,
-        techniques: null,
-        etats_conservations: null,
+        designations: [[]],
+        techniques: [[]],
+        etats_conservation: [[]],
       }),
       personnes_morales: this._formBuilder.group({
-        natures_pers: null,
+        natures_pers: [[]],
       }),
       personnes_physiques: this._formBuilder.group({
-        professions: null,
-        modes_deplacement: null,
+        professions: [[]],
+        modes_deplacement: [[]],
       }),
     });
   }

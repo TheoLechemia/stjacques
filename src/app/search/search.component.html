@@ -1,7 +1,9 @@
 <div class="container">
-  <p>
-    Effectuer une recherche dans la base de données du Patrimoine de saint Jacques et utiliser les filtres ci-dessous pour affiner votre recherche. Les filtres généraux seront automatiquement appliqués aux catégories selectionnées.
-  </p>
+  <div class="center-div mt-3">
+    <p>
+      Effectuer une recherche dans la base de données du Patrimoine de saint Jacques et utiliser les filtres ci-dessous pour affiner votre recherche. Les filtres généraux seront automatiquement appliqués aux catégories selectionnées.
+    </p>
+  </div>
   
   <h4> <mat-icon class="center-verticaly">search</mat-icon> Fitres généraux</h4>
 
@@ -27,19 +29,19 @@
           <mat-form-field class="col-sm-3 col-xs-12">
             <mat-label>Pays</mat-label>
             <mat-select [formControl]="formService.form.get('general')?.get('pays')" multiple>
-              <mat-option *ngFor="let pays of dataService.pays" [value]="pays.id">{{pays.name}}</mat-option>
+              <mat-option *ngFor="let pays of dataService.pays" [value]="pays">{{pays.name}}</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field class="col-sm-3 col-xs-12">
             <mat-label>Région</mat-label>
             <mat-select [formControl]="formService.form.get('general')?.get('regions')" multiple>
-              <mat-option *ngFor="let region of dataService.regions" [value]="region.id">{{region.name}}</mat-option>
+              <mat-option *ngFor="let region of dataService.regions" [value]="region">{{region.name}}</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field class="col-sm-3 col-xs-12">
             <mat-label>Département</mat-label>
             <mat-select [formControl]="formService.form.get('general')?.get('departements')" multiple>
-              <mat-option *ngFor="let departement of dataService.departements" [value]="departement.id">{{departement.name}}</mat-option>
+              <mat-option *ngFor="let departement of dataService.departements" [value]="departement">{{departement.name}}</mat-option>
             </mat-select>
           </mat-form-field>
           <!-- <mat-form-field class="col-sm-3 col-xs-12">
@@ -58,7 +60,7 @@
           <mat-form-field class="col-sm-3 col-xs-12">
             <mat-label>Siècle</mat-label>
             <mat-select [formControl]="formService.form.get('general')?.get('siecles')" multiple>
-              <mat-option *ngFor="let siecle of dataService.siecles" [value]="siecle.id">{{siecle.name}}</mat-option>
+              <mat-option *ngFor="let siecle of dataService.siecles" [value]="siecle">{{siecle.name}}</mat-option>
             </mat-select>
           </mat-form-field>
         </div>
@@ -75,13 +77,13 @@
           <mat-form-field class="col-sm-3 col-xs-12">
             <mat-label>Nature</mat-label>
             <mat-select [formControl]="formService.form.get('monuments_lieux')?.get('natures_monu')" multiple>
-              <mat-option *ngFor="let item of dataService.naturesMonu" [value]="item.id">{{item.name}}</mat-option>
+              <mat-option *ngFor="let item of dataService.naturesMonu" [value]="item">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field class="col-sm-3 col-xs-12">
             <mat-label>Etat de conservation</mat-label>
-            <mat-select [formControl]="formService.form.get('monuments_lieux')?.get('etat_conservations')" multiple>
-              <mat-option *ngFor="let item of dataService.etatsConservations" [value]="item.id">{{item.name}}</mat-option>
+            <mat-select [formControl]="formService.form.get('monuments_lieux')?.get('etats_conservation')" multiple>
+              <mat-option *ngFor="let item of dataService.etatsConservations" [value]="item">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -98,20 +100,20 @@
         <div class="row">
           <mat-form-field class="col-sm-6 col-xs-12">
             <mat-label>Désignation</mat-label>
-            <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('designation')" multiple>
-              <mat-option *ngFor="let item of dataService.designationsMob" [value]="item.id">{{item.name}}</mat-option>
+            <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('designations')" multiple>
+              <mat-option *ngFor="let item of dataService.designationsMob" [value]="item">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field class="col-sm-6 col-xs-12">
             <mat-label>Technique</mat-label>
             <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('techniques')" multiple>
-              <mat-option *ngFor="let item of dataService.techniquesMob" [value]="item.id">{{item.name}}</mat-option>
+              <mat-option *ngFor="let item of dataService.techniquesMob" [value]="item">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field class="col-sm-6 col-xs-12">
             <mat-label>Etat de conservation</mat-label>
-            <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('etat_conservations')" multiple>
-              <mat-option *ngFor="let item of dataService.etatsConservations" [value]="item.id">{{item.name}}</mat-option>
+            <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('etats_conservation')" multiple>
+              <mat-option *ngFor="let item of dataService.etatsConservations" [value]="item">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -129,7 +131,7 @@
           <mat-form-field class="col-sm-6 col-xs-12">
             <mat-label>Nature</mat-label>
             <mat-select [formControl]="formService.form.get('personnes_morales')?.get('natures_pers')" multiple>
-              <mat-option *ngFor="let item of dataService.naturesPersoMo" [value]="item.id">{{item.name}}</mat-option>
+              <mat-option *ngFor="let item of dataService.naturesPersoMo" [value]="item">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -147,13 +149,13 @@
           <mat-form-field class="col-sm-6 col-xs-12">
             <mat-label>Profession</mat-label>
             <mat-select [formControl]="formService.form.get('personnes_physiques')?.get('professions')" multiple>
-              <mat-option *ngFor="let item of dataService.professions" [value]="item.id">{{item.name}}</mat-option>
+              <mat-option *ngFor="let item of dataService.professions" [value]="item">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field class="col-sm-6 col-xs-12">
             <mat-label>Mode de déplacement</mat-label>
             <mat-select [formControl]="formService.form.get('personnes_physiques')?.get('modes_deplacement')" multiple>
-              <mat-option *ngFor="let item of dataService.deplacements" [value]="item.id">{{item.name}}</mat-option>
+              <mat-option *ngFor="let item of dataService.deplacements" [value]="item">{{item.name}}</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -163,6 +165,11 @@
     </mat-card>
 
 </div>
+
+<div class="center-div mt-3">
+  <button class="btn btn-lg btn-primary" [routerLink]="['/resultats']">Rechercher</button>
+</div>
+
 
 
 <!-- 

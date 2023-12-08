@@ -1,0 +1,10 @@
+.caroussel {
+    display: flex;
+    overflow-x: auto;
+
+}
+
+.caroussel app-patri-card {
+    width: 30vh;
+    margin-right: 15px;
+}

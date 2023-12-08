@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
+import { FormService } from './form.service';
 
 @Injectable({
   providedIn: 'root',
@@ -19,7 +20,11 @@ export class DataService {
   public naturesPersoMo = [];
   public professions = [];
   public deplacements = [];
-  constructor(private api: ApiService) {
+  public mobiliersImages = [];
+  public monumentsLieux = [];
+  public personnesMorales = [];
+  public personnesPhysiques = [];
+  constructor(private api: ApiService, public formService: FormService) {
     this.api.getObjects('pays').subscribe((data) => {
       this.pays = data;
     });
@@ -56,5 +61,55 @@ export class DataService {
     // this.api.getObjects("BibSiecle", {limit:200}).subscribe((data => {
     //   this.centuries = data.list
     // }));
+  }
+
+  cleanAndFormatForm(form: any, key: string) {
+    let cleanedForm = { ...form[key], ...form['general'] };
+    for (const [key, value] of Object.entries(cleanedForm)) {
+      if (Array.isArray(value)) {
+        cleanedForm[key] = value.map((el) => el.id);
+      }
+      if (value && (value as any).length == 0) {
+        delete cleanedForm[key];
+      }
+    }
+    console.log(cleanedForm);
+
+    return cleanedForm;
+  }
+  searchAllCategories() {
+    const form = Object.assign({}, this.formService.form.value);
+    if (form.searchOn.mobiliers_images) {
+      let cleanedForm = this.cleanAndFormatForm(form, 'mobiliers_images');
+      this.api
+        .getObjectswithPost('mobiliers_images', cleanedForm)
+        .subscribe((data) => {
+          this.mobiliersImages = data;
+        });
+    }
+    if (form.searchOn.monuments_lieux) {
+      let cleanedForm = this.cleanAndFormatForm(form, 'monuments_lieux');
+      this.api
+        .getObjectswithPost('monuments_lieux', cleanedForm)
+        .subscribe((data) => {
+          this.monumentsLieux = data;
+        });
+    }
+    if (form.searchOn.personnes_morales) {
+      let cleanedForm = this.cleanAndFormatForm(form, 'personnes_morales');
+      this.api
+        .getObjectswithPost('personnes_morales', cleanedForm)
+        .subscribe((data) => {
+          this.personnesMorales = data;
+        });
+    }
+    if (form.searchOn.personnes_physiques) {
+      let cleanedForm = this.cleanAndFormatForm(form, 'personnes_physiques');
+      this.api
+        .getObjectswithPost('personnes_physiques', cleanedForm)
+        .subscribe((data) => {
+          this.personnesPhysiques = data;
+        });
+    }
   }
 }

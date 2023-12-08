@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class PatriCardComponent implements OnInit {
   @Input() imgAutoWidth: boolean = true;
   @Input() data: any = {};
+  @Input() showCategorie: boolean = true;
   constructor(private _router: Router) {}
 
   ngOnInit(): void {}

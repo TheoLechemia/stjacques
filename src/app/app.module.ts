@@ -30,6 +30,8 @@ import { PatriCardComponent } from './patri-card/patri-card.component';
 import { MunicipalityComponent } from './municipality/municipality.component';
 import { SearchComponent } from './search/search.component';
 import { ResultsComponent } from './results/results.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { LocationComponent } from './location/location.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { ResultsComponent } from './results/results.component';
     MunicipalityComponent,
     SearchComponent,
     ResultsComponent,
+    BreadcrumbComponent,
+    LocationComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +71,6 @@ import { ResultsComponent } from './results/results.component';
       deps: [AppConfigService],
       useFactory: (appConfigService: AppConfigService) => {
         return () => {
-          //Make sure to return a promise!
           return appConfigService.loadAppConfig();
         };
       },

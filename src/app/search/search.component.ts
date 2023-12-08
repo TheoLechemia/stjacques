@@ -12,4 +12,6 @@ export class SearchComponent {
     public dataService: DataService,
     public formService: FormService
   ) {}
+
+  onSearchClick() {}
 }

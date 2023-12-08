@@ -26,13 +26,18 @@ export class ApiService {
     let queryString = new HttpParams();
     // eslint-disable-next-line guard-for-in
     for (const key in params) {
-      // const [operator, value] = params[key].split(',');
-      // const formatedFilter = `(${key},${operator},${value})`;
       queryString = queryString.append(key, params[key]);
     }
     // always retreive publish data
     return this.http.get(`${this.INTERNAL_API_ENDPOINT}/${endpoint}`, {
       params: queryString,
     });
+  }
+  public getObjectswithPost(endpoint: string, data: any) {
+    return this.http.post<any>(
+      `${this.INTERNAL_API_ENDPOINT}/${endpoint}`,
+      data,
+      { params: new HttpParams().set('fields', 'medias') }
+    );
   }
 }
