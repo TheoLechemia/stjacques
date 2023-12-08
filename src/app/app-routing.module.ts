@@ -20,13 +20,16 @@ const routes: Routes = [
   {
     path: 'resultats',
     component: ResultsComponent,
-    data: { breadcrumb: 'Resultats' },
+    data: { breadcrumb: 'Resultat' },
   },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      useHash: true,
+    }),
   ],
   exports: [RouterModule],
 })
