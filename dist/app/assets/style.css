@@ -10,6 +10,10 @@ body {
     vertical-align: middle;
 
 }
+
+.muted {
+    color: #413d3d94;
+}
 .horizontaly-center {
     text-align: center;
 }
@@ -28,6 +32,10 @@ body {
 
 .bold {
     font-weight: bold;
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 .btn-primary {
