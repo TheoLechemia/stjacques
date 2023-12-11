@@ -57,6 +57,10 @@
             <div *ngIf="detailInfos.meta_categorie == 'monuments_lieux' || detailInfos.meta_categorie == 'mobiliers_images'" >
               <div class="row">
                 <div class="col-6">
+                  <app-location [detailInfos]="detailInfos" ></app-location>
+                </div>
+
+                <div class="col-6">
                   <mat-list>
                     <mat-list-item>
                       <mat-icon matListItemIcon>schedule</mat-icon>
@@ -76,15 +80,15 @@
                     </mat-list-item>
                 </mat-list>
                 </div>
-                <div class="col-6">
-                  <app-location [detailInfos]="detailInfos" ></app-location>
-                </div>
 
 
               </div>
             </div>
             <div *ngIf="detailInfos.meta_categorie == 'personnes_morales'" >
               <div class="row">
+                <div class="col-6">
+                  <app-location [detailInfos]="detailInfos" ></app-location>
+                </div>
                 <div class="col-6">
                   <mat-list>
                     <mat-list-item>
@@ -95,15 +99,17 @@
 
                 </mat-list>
                 </div>
-                <div class="col-6">
-                  <app-location [detailInfos]="detailInfos" ></app-location>
-                </div>
+
 
 
               </div>
             </div>
             <div *ngIf="detailInfos.meta_categorie == 'personnes_physiques'" >
               <div class="row">
+                <div class="col-6">
+                  <app-location [detailInfos]="detailInfos" ></app-location>
+                </div>
+
                 <div class="col-6">
                   <mat-list>
                     <mat-list-item>
@@ -124,9 +130,6 @@
                     
 
                 </mat-list>
-                </div>
-                <div class="col-6">
-                  <app-location [detailInfos]="detailInfos" ></app-location>
                 </div>
 
 
