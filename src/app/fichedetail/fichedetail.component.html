@@ -200,40 +200,77 @@
     <div class="col-12">
       <div class="card">
         <h2 class="card-header">  Fiches liées</h2>
-        <div class="card-body detail-body">
-          <div class="mt-2">
-            <h4>Monuments & lieux</h4>
-            <div class="caroussel">
-              <app-patri-card class="mb-2" *ngFor="let i of [1,1,1,1, 1,1,1,1,1,1,1,1,1,1,1]"></app-patri-card>
-            </div>
-          </div>
-          <div class="mt-2">
+        <div *ngIf="detailInfos.meta_categorie == 'monuments_lieux'" class="card-body detail-body">
+          <div *ngIf="detailInfos.mobiliers_images_liees.length > 0" class="mt-2">
             <h4>Mobiliers & Images</h4>
             <div class="caroussel">
-              <app-patri-card class="mb-2" *ngFor="let i of [1,1,1,1, 1,1,1,1,1]"></app-patri-card>
+              <app-patri-card [data]="data" class="mb-2" *ngFor="let data of detailInfos.mobiliers_images_liees"></app-patri-card>
             </div>
           </div>
-          <div class="mt-2">
-            <h4>Mobiliers & Images</h4>
+          <div *ngIf="detailInfos.personnes_morales_liees.length > 0" class="mt-2">
+            <h4>Personnes morales</h4>
             <div class="caroussel">
-              <app-patri-card class="mb-2" *ngFor="let i of [1,1,1,1, 1,1,1,1,1]"></app-patri-card>
-            </div>
-          </div>
-          <div class="mt-2">
-            <h4>Personnes Physiques</h4>
-            <div class="caroussel">
-              <app-patri-card class="mb-2" *ngFor="let i of [1,1,1,1, 1,1,1,1,1]"></app-patri-card>
-            </div>
-          </div>
-          <div class="mt-2">
-            <h4>Personnes Morales</h4>
-            <div class="caroussel">
-              <app-patri-card class="mb-2" *ngFor="let i of [1,1,1,1, 1,1,1,1,1]"></app-patri-card>
+              <app-patri-card [data]="data" class="mb-2" *ngFor="let data of detailInfos.personnes_morales_liees"></app-patri-card>
             </div>
           </div>
 
+          <div *ngIf="detailInfos.personnes_physiques_liees.length > 0" class="mt-2">
+            <h4>Personnes physiques</h4>
+            <div class="caroussel">
+              <app-patri-card [data]="data" class="mb-2" *ngFor="let data of detailInfos.personnes_physiques_liees"></app-patri-card>
+            </div>
+          </div>
+      </div>
+      <!-- MOBILIER IMAGE -->
+      <div *ngIf="detailInfos.meta_categorie == 'mobiliers_images'" class="card-body detail-body">
+        <div *ngIf="detailInfos.monuments_lieux_liees.length > 0" class="mt-2">
+          <h4>Monuments & Lieux</h4>
+          <div class="caroussel">
+            <app-patri-card [data]="data" class="mb-2" *ngFor="let data of detailInfos.monuments_lieux_liees"></app-patri-card>
+          </div>
         </div>
-  
+        <div *ngIf="detailInfos.personnes_morales_liees.length > 0" class="mt-2">
+          <h4>Personnes morales</h4>
+          <div class="caroussel">
+            <app-patri-card [data]="data" class="mb-2" *ngFor="let data of detailInfos.personnes_morales_liees"></app-patri-card>
+          </div>
+        </div>
+      </div>
+      <!-- PERSONNES MORALES -->
+      <div *ngIf="detailInfos.meta_categorie == 'personnes_morales'" class="card-body detail-body">
+        <div *ngIf="detailInfos.monuments_lieux_liees.length > 0" class="mt-2">
+          <h4>Monuments & Lieux</h4>
+          <div class="caroussel">
+            <app-patri-card [data]="data" class="mb-2" *ngFor="let data of detailInfos.monuments_lieux_liees"></app-patri-card>
+          </div>
+        </div>
+        <div *ngIf="detailInfos.mobiliers_images_liees.length > 0" class="mt-2">
+          <h4>Mobiliers & Images</h4>
+          <div class="caroussel">
+            <app-patri-card [data]="data" class="mb-2" *ngFor="let data of detailInfos.mobiliers_images_liees"></app-patri-card>
+          </div>
+        </div>
+        <div *ngIf="detailInfos.personnes_physiques_liees.length > 0" class="mt-2">
+          <h4>Personnes physiques</h4>
+          <div class="caroussel">
+            <app-patri-card [data]="data" class="mb-2" *ngFor="let data of detailInfos.personnes_physiques_liees"></app-patri-card>
+          </div>
+        </div>
+      </div>
+      <!-- PERSONNES PHYSIQUES -->
+      <div *ngIf="detailInfos.meta_categorie == 'personnes_physiques'" class="card-body detail-body">
+        <div *ngIf="detailInfos.monuments_lieux_liees.length > 0" class="mt-2">
+          <h4>Monuments & Lieux</h4>
+          <div class="caroussel">
+            <app-patri-card [data]="data" class="mb-2" *ngFor="let data of detailInfos.monuments_lieux_liees"></app-patri-card>
+          </div>
+        </div>
+        <div *ngIf="detailInfos.personnes_morales_liees.length > 0" class="mt-2">
+          <h4>Personnes morales</h4>
+          <div class="caroussel">
+            <app-patri-card [data]="data" class="mb-2" *ngFor="let data of detailInfos.personnes_morales_liees"></app-patri-card>
+          </div>
+        </div>
       </div>
     </div>
   </div>
