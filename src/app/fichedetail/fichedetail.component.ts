@@ -21,6 +21,46 @@ export class FichedetailComponent implements OnInit {
   public categorie: string;
   public detailInfos: any = {};
   public mapping: any;
+  public advancedFields: any = {
+    monuments_lieux: [
+      'geolocalisation',
+      'source',
+      'bibliographie',
+      'date_creation',
+      'date_maj',
+      'auteurs',
+      'contributeurs',
+      'redacteurs',
+      'geolocalisation',
+    ],
+    mobiliers_images: [
+      'source',
+      'bibliographie',
+      'date_creation',
+      'date_maj',
+      'auteurs',
+      'contributeurs',
+      'redacteurs',
+    ],
+    personnes_morales: [
+      'source',
+      'bibliographie',
+      'date_creation',
+      'date_maj',
+      'auteurs',
+      'contributeurs',
+      'redacteurs',
+    ],
+    personnes_physiques: [
+      'source',
+      'bibliographie',
+      'date_creation',
+      'date_maj',
+      'auteurs',
+      'contributeurs',
+      'redacteurs',
+    ],
+  };
 
   ngOnInit() {
     this._routing.params.subscribe((params) => {
@@ -34,7 +74,9 @@ export class FichedetailComponent implements OnInit {
 
   loadData() {
     this._api.getObjects(`${this.categorie}/${this.id}`).subscribe((data) => {
-      this.detailInfos = data;
+      this.detailInfos = this.formatData(data);
+      console.log(this.detailInfos);
+
       this.detailInfos.medias.forEach((media: any) => {
         this.album.push({
           src: media.url,
@@ -42,9 +84,19 @@ export class FichedetailComponent implements OnInit {
           thumb: media.url + '&h=500&w=500',
         });
       });
-
-      console.log(this.album);
     });
+  }
+
+  formatData(data: any) {
+    const tmp: any = {};
+    for (let key in data) {
+      if (this.advancedFields[data.meta_categorie].includes(key)) {
+        tmp[key] = data[key];
+      }
+    }
+    data['advanced_fields'] = tmp;
+
+    return data;
   }
 
   open(i: number) {

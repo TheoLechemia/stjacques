@@ -78,6 +78,10 @@ export class DataService {
     return cleanedForm;
   }
   searchAllCategories() {
+    this.monumentsLieux = [];
+    this.mobiliersImages = [];
+    this.personnesMorales = [];
+    this.personnesPhysiques = [];
     const form = Object.assign({}, this.formService.form.value);
     if (form.searchOn.mobiliers_images) {
       let cleanedForm = this.cleanAndFormatForm(form, 'mobiliers_images');
