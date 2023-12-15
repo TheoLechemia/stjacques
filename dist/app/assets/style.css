@@ -2,6 +2,12 @@ body {
     background-color: #EAE5D4;
 }
 
+.italic-title {
+    font-style: italic;
+    font-family: serif;
+}
+
+
 .primary-bg-color {
     background-color: #8C101C;
 }
