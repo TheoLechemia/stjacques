@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { UntypedFormBuilder, FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, NonNullableFormBuilder } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FormService {
   public form: FormGroup;
-  constructor(private _formBuilder: FormBuilder) {
+  constructor(private _formBuilder: NonNullableFormBuilder) {
     this.form = this._formBuilder.group({
       searchOn: this._formBuilder.group({
         monuments_lieux: true,

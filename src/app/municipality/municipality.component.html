@@ -8,6 +8,7 @@
               <mat-icon>close</mat-icon>
             </button>
           </mat-form-field>
+          <mat-option *ngIf="municipalities.length == 0" class="not-clickable" > Aucun résultat trouvé</mat-option>
       <mat-option *ngFor="let municipality of municipalities" [value]="municipality.id">{{municipality.name}}</mat-option>
     </mat-select>
   </mat-form-field>

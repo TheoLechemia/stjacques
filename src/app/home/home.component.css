@@ -29,6 +29,17 @@
     overflow: visible!important;
 }
 
+.caroussel {
+    display: flex;
+    overflow-x: auto;
+}
+
+
+.caroussel app-patri-card {
+    width: 30vh;
+    margin-right: 15px;
+}
+
 @media (min-width: 768px) {
     #home-title {
         font-size : 2rem;

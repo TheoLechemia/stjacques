@@ -8,10 +8,17 @@ import { FormService } from '../form.service';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent {
+  public hiddenAdvanced = true;
   constructor(
     public dataService: DataService,
     public formService: FormService
   ) {}
 
-  onSearchClick() {}
+  resetFilters() {
+    this.formService.form.reset();
+  }
+
+  toggle() {
+    this.hiddenAdvanced = !this.hiddenAdvanced;
+  }
 }

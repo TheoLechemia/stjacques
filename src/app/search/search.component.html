@@ -1,29 +1,33 @@
 <div class="container">
-  <div class="center-div mt-3">
+  <div class="mt-3">
     <p>
       Effectuer une recherche dans la base de données du Patrimoine de saint Jacques et utiliser les filtres ci-dessous pour affiner votre recherche. Les filtres généraux seront automatiquement appliqués aux catégories selectionnées.
     </p>
   </div>
   
-  <h4> <mat-icon class="center-verticaly">search</mat-icon> Fitres généraux</h4>
-
-    <mat-card>
+  <h5  class="italic-title">1. Choisir une ou plusieurs catégories</h5>
+    <mat-card class="mb-3">
       <mat-card-content>
         <div class="row">
           <section class="example-section col-sm-6 col-xs-12">
-            <mat-checkbox [formControl]="formService.form.get('searchOn')?.get('monuments_lieux')" class="example-margin">Activer la recherche dans Monuments & Lieux </mat-checkbox>
+            <mat-checkbox [formControl]="formService.form.get('searchOn')?.get('monuments_lieux')" class="example-margin"> Monuments & Lieux </mat-checkbox>
           </section>
           <section class="example-section col-sm-6 col-xs-12">
-            <mat-checkbox [formControl]="formService.form.get('searchOn')?.get('mobiliers_images')" class="example-margin">Activer la recherche dans Personnes Morales</mat-checkbox>
+            <mat-checkbox [formControl]="formService.form.get('searchOn')?.get('mobiliers_images')" class="example-margin">Personnes Morales</mat-checkbox>
           </section>
           <section class="example-section col-sm-6 col-xs-12">
-            <mat-checkbox [formControl]="formService.form.get('searchOn')?.get('personnes_morales')" class="example-margin">Activer la recherche dans Mobiliers & Images </mat-checkbox>
+            <mat-checkbox [formControl]="formService.form.get('searchOn')?.get('personnes_morales')" class="example-margin">Mobiliers & Images </mat-checkbox>
           </section>
           <section class="example-section col-sm-6 col-xs-12">
-            <mat-checkbox [formControl]="formService.form.get('searchOn')?.get('personnes_physiques')" class="example-margin">Activer la recherche dans Personnes Physiques </mat-checkbox>
+            <mat-checkbox [formControl]="formService.form.get('searchOn')?.get('personnes_physiques')" class="example-margin">Personnes Physiques </mat-checkbox>
           </section>
         </div>
-
+      </mat-card-content>
+    </mat-card>
+  
+    <h5 class="italic-title">2. Choisir une localité pour les catégories sélectionnées</h5>
+    <mat-card class="mb-3">
+      <mat-card-content>
         <h5 class="mt-3">Localité</h5>
         <div class="row">
           <mat-form-field class="col-sm-3 col-xs-12">
@@ -53,8 +57,14 @@
           <app-municipality class="col-sm-3 col-xs-12" [parentFormControl]="formService.form.get('general')?.get('communes')"></app-municipality>
           
         </div>
+      </mat-card-content>
+    </mat-card>
 
-        <h5 class="mt-3">Siècle</h5>
+
+    <h5 class="italic-title">3. Choisir une periode historique pour les catégories sélectionnées</h5>
+    <mat-card>
+      <mat-card-content>
+        <h5 class="mt-3">Siècles</h5>
 
         <div class="row">
           <mat-form-field class="col-sm-3 col-xs-12">
@@ -65,128 +75,129 @@
           </mat-form-field>
         </div>
       </mat-card-content>
-
     </mat-card>
+    <div class="horizontaly-center mt-3 ">
+      <button (click)="toggle()" class="btn btn-lg btn-light blue"> 
+        <span  *ngIf="hiddenAdvanced">
+          ACCEDER A LA RECHERCHE AVANCEE
+          <mat-icon class="center-verticaly"> expand_more</mat-icon>
+        </span>
+        <span  *ngIf="!hiddenAdvanced">
+          MASQUER LA RECHERCHE AVANCEE
+          <mat-icon class="center-verticaly"> expand_less</mat-icon>
+    
+        </span>
+      </button>
+    </div>
 
-  <h4 class="mt-3"> <img class="center-verticaly" width="25" src="../../assets/ico_monuments_lieux.png" alt=""> Monuments & Lieux</h4>
+  <div [hidden]="hiddenAdvanced" id="collapse">
 
-    <mat-card>
-      <mat-card-content>
-        <h5>Affiner votre recherche :</h5>
-        <div class="row">
-          <mat-form-field class="col-sm-3 col-xs-12">
-            <mat-label>Nature</mat-label>
-            <mat-select [formControl]="formService.form.get('monuments_lieux')?.get('natures_monu')" multiple>
-              <mat-option *ngFor="let item of dataService.naturesMonu" [value]="item">{{item.name}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="col-sm-3 col-xs-12">
-            <mat-label>Etat de conservation</mat-label>
-            <mat-select [formControl]="formService.form.get('monuments_lieux')?.get('etats_conservation')" multiple>
-              <mat-option *ngFor="let item of dataService.etatsConservations" [value]="item">{{item.name}}</mat-option>
-            </mat-select>
-          </mat-form-field>
+    <h4 class="mt-3 italic-title "> <img class="center-verticaly" width="25" src="../../assets/ico_monuments_lieux.png" alt=""> Monuments & Lieux</h4>
 
-        </div>
+      <mat-card>
+        <mat-card-content>
+          <h5>Affiner votre recherche :</h5>
+          <div class="row">
+            <mat-form-field class="col-sm-3 col-xs-12">
+              <mat-label>Nature</mat-label>
+              <mat-select [formControl]="formService.form.get('monuments_lieux')?.get('natures_monu')" multiple>
+                <mat-option *ngFor="let item of dataService.naturesMonu" [value]="item">{{item.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="col-sm-3 col-xs-12">
+              <mat-label>Etat de conservation</mat-label>
+              <mat-select [formControl]="formService.form.get('monuments_lieux')?.get('etats_conservation')" multiple>
+                <mat-option *ngFor="let item of dataService.etatsConservations" [value]="item">{{item.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
 
-      </mat-card-content>
-    </mat-card>
+          </div>
 
-    <h4 class="mt-3"> <img class="center-verticaly" width="25" src="../../assets/ico_mobiliers_images.png" alt=""> Mobiliers & Images</h4>
+        </mat-card-content>
+      </mat-card>
 
-    <mat-card>
-      <mat-card-content>
-        <h5>Affiner votre recherche :</h5>
-        <div class="row">
-          <mat-form-field class="col-sm-6 col-xs-12">
-            <mat-label>Désignation</mat-label>
-            <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('designations')" multiple>
-              <mat-option *ngFor="let item of dataService.designationsMob" [value]="item">{{item.name}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="col-sm-6 col-xs-12">
-            <mat-label>Technique</mat-label>
-            <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('techniques')" multiple>
-              <mat-option *ngFor="let item of dataService.techniquesMob" [value]="item">{{item.name}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="col-sm-6 col-xs-12">
-            <mat-label>Etat de conservation</mat-label>
-            <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('etats_conservation')" multiple>
-              <mat-option *ngFor="let item of dataService.etatsConservations" [value]="item">{{item.name}}</mat-option>
-            </mat-select>
-          </mat-form-field>
+      <h4 class="mt-3 italic-title "> <img class="center-verticaly" width="25" src="../../assets/ico_mobiliers_images.png" alt=""> Mobiliers & Images</h4>
 
-        </div>
+      <mat-card>
+        <mat-card-content>
+          <h5>Affiner votre recherche :</h5>
+          <div class="row">
+            <mat-form-field class="col-sm-6 col-xs-12">
+              <mat-label>Désignation</mat-label>
+              <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('designations')" multiple>
+                <mat-option *ngFor="let item of dataService.designationsMob" [value]="item">{{item.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="col-sm-6 col-xs-12">
+              <mat-label>Technique</mat-label>
+              <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('techniques')" multiple>
+                <mat-option *ngFor="let item of dataService.techniquesMob" [value]="item">{{item.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="col-sm-6 col-xs-12">
+              <mat-label>Etat de conservation</mat-label>
+              <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('etats_conservation')" multiple>
+                <mat-option *ngFor="let item of dataService.etatsConservations" [value]="item">{{item.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
 
-      </mat-card-content>
-    </mat-card>
+          </div>
 
-    <h4 class="mt-3"> <img class="center-verticaly" width="25" src="../../assets/ico_personnes_morales.png" alt=""> Personnes Morales</h4>
+        </mat-card-content>
+      </mat-card>
 
-    <mat-card>
-      <mat-card-content>
-        <h5>Affiner votre recherche :</h5>
-        <div class="row">
-          <mat-form-field class="col-sm-6 col-xs-12">
-            <mat-label>Nature</mat-label>
-            <mat-select [formControl]="formService.form.get('personnes_morales')?.get('natures_pers')" multiple>
-              <mat-option *ngFor="let item of dataService.naturesPersoMo" [value]="item">{{item.name}}</mat-option>
-            </mat-select>
-          </mat-form-field>
+      <h4 class="mt-3 italic-title "> <img class="center-verticaly" width="25" src="../../assets/ico_personnes_morales.png" alt=""> Personnes Morales</h4>
 
-        </div>
+      <mat-card>
+        <mat-card-content>
+          <h5>Affiner votre recherche :</h5>
+          <div class="row">
+            <mat-form-field class="col-sm-6 col-xs-12">
+              <mat-label>Nature</mat-label>
+              <mat-select [formControl]="formService.form.get('personnes_morales')?.get('natures_pers')" multiple>
+                <mat-option *ngFor="let item of dataService.naturesPersoMo" [value]="item">{{item.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
 
-      </mat-card-content>
-    </mat-card>
+          </div>
 
-    <h4 class="mt-3"> <img class="center-verticaly" width="25" src="../../assets/ico_personnes_physiques.png" alt=""> Personnes Physiques</h4>
+        </mat-card-content>
+      </mat-card>
 
-    <mat-card>
-      <mat-card-content>
-        <h5>Affiner votre recherche :</h5>
-        <div class="row">
-          <mat-form-field class="col-sm-6 col-xs-12">
-            <mat-label>Profession</mat-label>
-            <mat-select [formControl]="formService.form.get('personnes_physiques')?.get('professions')" multiple>
-              <mat-option *ngFor="let item of dataService.professions" [value]="item">{{item.name}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field class="col-sm-6 col-xs-12">
-            <mat-label>Mode de déplacement</mat-label>
-            <mat-select [formControl]="formService.form.get('personnes_physiques')?.get('modes_deplacement')" multiple>
-              <mat-option *ngFor="let item of dataService.deplacements" [value]="item">{{item.name}}</mat-option>
-            </mat-select>
-          </mat-form-field>
+      <h4 class="mt-3 italic-title "> <img class="center-verticaly" width="25" src="../../assets/ico_personnes_physiques.png" alt=""> Personnes Physiques</h4>
 
-        </div>
+      <mat-card>
+        <mat-card-content>
+          <h5>Affiner votre recherche :</h5>
+          <div class="row">
+            <mat-form-field class="col-sm-6 col-xs-12">
+              <mat-label>Profession</mat-label>
+              <mat-select [formControl]="formService.form.get('personnes_physiques')?.get('professions')" multiple>
+                <mat-option *ngFor="let item of dataService.professions" [value]="item">{{item.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="col-sm-6 col-xs-12">
+              <mat-label>Mode de déplacement</mat-label>
+              <mat-select [formControl]="formService.form.get('personnes_physiques')?.get('modes_deplacement')" multiple>
+                <mat-option *ngFor="let item of dataService.deplacements" [value]="item">{{item.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
 
-      </mat-card-content>
-    </mat-card>
+          </div>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
 
 </div>
 
-<div class="center-div mt-3">
-  <button class="btn btn-lg btn-primary" [routerLink]="['/resultats']">Rechercher</button>
+
+
+<div id="center-search" class="mt-3">
+  <button class="btn btn-lg btn-primary me-3" [routerLink]="['/resultats']">VALIDER MES CRITERES DE RECHERCHE</button>
+  <button class="btn btn-lg btn-light blue " (click)="resetFilters()">RÉINITIALISER MA RECHERCHE</button>
+  <p class="white mt-3">POUR AFFINER VOTRE RECHERCHE EFFECTUER UNE RECHERCHE AVANCEE </p>
 </div>
 
 
 
-<!-- 
-<mat-form-field>
-    <mat-label>Pays</mat-label>
-    <mat-select [formControl]="formService.form.get('countries')" multiple>
-      <mat-option *ngFor="let item of dataService.countries" [value]="item.id">{{item.name}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field>
-
-  <mat-label>Siècles</mat-label>
-  <mat-select [formControl]="formService.form.get('centuries')" multiple>
-    <mat-option *ngFor="let century of dataService.centuries" [value]="century.IdSiecle">{{century.SiecleList}}</mat-option>
-  </mat-select>
-</mat-form-field>
-
-<app-municipality [parentFormControl]="formService.form.get('municipalities')"></app-municipality>
- -->
