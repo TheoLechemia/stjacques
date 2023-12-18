@@ -73,8 +73,6 @@ export class DataService {
         delete cleanedForm[key];
       }
     }
-    console.log(cleanedForm);
-
     return cleanedForm;
   }
   searchAllCategories() {
