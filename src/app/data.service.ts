@@ -84,7 +84,9 @@ export class DataService {
     if (form.searchOn.mobiliers_images) {
       let cleanedForm = this.cleanAndFormatForm(form, 'mobiliers_images');
       this.api
-        .getObjectswithPost('mobiliers_images', cleanedForm)
+        .getObjectswithPost('mobiliers_images', cleanedForm, {
+          fields: ['medias', 'siecles'],
+        })
         .subscribe((data) => {
           this.mobiliersImages = data;
         });
@@ -92,7 +94,9 @@ export class DataService {
     if (form.searchOn.monuments_lieux) {
       let cleanedForm = this.cleanAndFormatForm(form, 'monuments_lieux');
       this.api
-        .getObjectswithPost('monuments_lieux', cleanedForm)
+        .getObjectswithPost('monuments_lieux', cleanedForm, {
+          fields: ['medias', 'siecles'],
+        })
         .subscribe((data) => {
           this.monumentsLieux = data;
         });
@@ -100,7 +104,9 @@ export class DataService {
     if (form.searchOn.personnes_morales) {
       let cleanedForm = this.cleanAndFormatForm(form, 'personnes_morales');
       this.api
-        .getObjectswithPost('personnes_morales', cleanedForm)
+        .getObjectswithPost('personnes_morales', cleanedForm, {
+          fields: ['medias', 'siecles'],
+        })
         .subscribe((data) => {
           this.personnesMorales = data;
         });
@@ -108,7 +114,9 @@ export class DataService {
     if (form.searchOn.personnes_physiques) {
       let cleanedForm = this.cleanAndFormatForm(form, 'personnes_physiques');
       this.api
-        .getObjectswithPost('personnes_physiques', cleanedForm)
+        .getObjectswithPost('personnes_physiques', cleanedForm, {
+          fields: ['medias', 'siecles'],
+        })
         .subscribe((data) => {
           this.personnesPhysiques = data;
         });

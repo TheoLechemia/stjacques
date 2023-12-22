@@ -33,11 +33,25 @@ export class ApiService {
       params: queryString,
     });
   }
-  public getObjectswithPost(endpoint: string, data: any) {
+  public getObjectswithPost(
+    endpoint: string,
+    data: any,
+    queryString: any = {}
+  ) {
+    let params = new HttpParams();
+    for (let param in queryString) {
+      if (Array.isArray(queryString[param])) {
+        queryString[param].forEach((el: string) => {
+          params = params.append(param, el);
+        });
+      } else {
+        params = params.set(param, queryString[param]);
+      }
+    }
     return this.http.post<any>(
       `${this.INTERNAL_API_ENDPOINT}/${endpoint}`,
       data,
-      { params: new HttpParams().set('fields', 'medias') }
+      { params: params }
     );
   }
 }

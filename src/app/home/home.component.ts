@@ -22,18 +22,22 @@ export class HomeComponent implements OnInit {
   loadRandom() {
     this.randomCards = [];
     [
-      'monuments_lieux',
-      'mobiliers_images',
-      'personnes_morales',
-      'personnes_physiques',
-    ].forEach((endpoint) => {
+      ['monuments_lieux', 'natures'],
+      ['mobiliers_images', 'designations'],
+      ['personnes_morales', 'natures'],
+      ['personnes_physiques', 'professions'],
+    ].forEach((params: Array<any>) => {
       this._api
-        .getObjects(endpoint, {
-          limit: 2,
-          random: 'true',
-          fields: 'medias',
-          has_medias: true,
-        })
+        .getObjectswithPost(
+          params[0],
+          {},
+          {
+            limit: 3,
+            random: 'true',
+            fields: ['medias', 'siecles', params[1]],
+            has_medias: true,
+          }
+        )
         .subscribe((data) => {
           console.log(data);
 
