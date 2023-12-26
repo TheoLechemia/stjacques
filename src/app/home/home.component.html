@@ -73,16 +73,14 @@ personnages, confréries... liés à saint Jacques
 
 <div class="primary-bg-color px-3 pb-3" id="random-block">
   <h3 class="center py-3 white ">Patrimoines à découvrir</h3>
-        <div class="caroussel"> 
-          <app-patri-card class="mb-3"  *ngFor="let data of randomCards" [data]="data"></app-patri-card>
-        </div>
-        <div class="center-div mt-2">
-          <button (click)="loadRandom()"  class="btn btn-primary italic-title ">
-            <mat-icon id="refresh-icon" class="fs-1">refresh</mat-icon>  <br>
-            <h5>Actualiser </h5> 
-          </button>
-        </div>
-</div>
+  <app-caroussel [datas]="randomCards"> </app-caroussel>
+
+    <div class="center-div mt-2">
+      <button (click)="loadRandom()"  class="btn btn-primary italic-title ">
+        <mat-icon id="refresh-icon" class="fs-1">refresh</mat-icon>  <br>
+        <h5>Actualiser </h5> 
+      </button>
+    </div>
 
 <div class="mt-3">
   <div class="center-div">

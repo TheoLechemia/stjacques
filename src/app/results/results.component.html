@@ -78,10 +78,7 @@
                 <h5 *ngIf="dataService.monumentsLieux.length == 0"> Aucun résultat trouvé </h5>
     
                 <div class="col">
-                    <div class="caroussel">
-                      <app-patri-card  [showCategorie]="false" class="mb-2" *ngFor="let monu of dataService.monumentsLieux" [data]="monu"></app-patri-card>
-    
-                    </div>
+                  <app-caroussel [datas]="dataService.monumentsLieux"> </app-caroussel>
                 </div>
               </div>
         </div>
@@ -92,10 +89,7 @@
               <h5 *ngIf="dataService.mobiliersImages.length == 0"> Aucun résultat trouvé </h5>
     
                 <div class="col">
-                    <div class="caroussel">
-                      <app-patri-card [showCategorie]="false" class="mb-2" *ngFor="let mob of dataService.mobiliersImages" [data]="mob"></app-patri-card>
-    
-                    </div>
+                  <app-caroussel [datas]="dataService.mobiliersImages"> </app-caroussel>
                 </div>
               </div>
 
@@ -106,10 +100,7 @@
             <div class="row mb-3">
                 <h5 *ngIf="dataService.personnesPhysiques.length == 0"> Aucun résultat trouvé </h5>
                 <div class="col">
-                    <div class="caroussel">
-                      <app-patri-card [showCategorie]="false"  class="mb-2" *ngFor="let persP of dataService.personnesPhysiques" [data]="persP"></app-patri-card>
-    
-                    </div>
+                  <app-caroussel [datas]="dataService.personnesPhysiques"> </app-caroussel>
                 </div>
               </div>
         </div>
@@ -118,10 +109,8 @@
             <div class="row mb-3">
               <h5 *ngIf="dataService.personnesMorales.length == 0"> Aucun résultat trouvé </h5>
                 <div class="col">
-                    <div class="caroussel">
-                      <app-patri-card [showCategorie]="false"  class="mb-2" *ngFor="let persM of dataService.personnesMorales" [data]="persM"></app-patri-card>
-    
-                    </div>
+                  <app-caroussel [datas]="dataService.personnesMorales"> </app-caroussel>
+
                 </div>
               </div>
         </div>

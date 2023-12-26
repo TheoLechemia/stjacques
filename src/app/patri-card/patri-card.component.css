@@ -26,6 +26,16 @@
     cursor: pointer;
 }
 
+.clickable-card {
+    cursor: pointer;
+}
+
+.clickable-card:active{
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
 .clickable-card:hover {
     -webkit-box-shadow: 4px 4px 15px -3px #000000; 
     box-shadow: 4px 4px 15px -3px #000000;

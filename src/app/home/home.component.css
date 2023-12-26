@@ -10,6 +10,10 @@
     text-align: center;
 }
 
+app-patri-card {
+    cursor: grab;
+}
+
 #home-title {
     padding-top: 10rem;
     color: white;
@@ -29,16 +33,9 @@
     overflow: visible!important;
 }
 
-.caroussel {
-    display: flex;
-    overflow-x: auto;
-}
 
 
-.caroussel app-patri-card {
-    width: 30vh;
-    margin-right: 15px;
-}
+
 
 @media (min-width: 768px) {
     #home-title {

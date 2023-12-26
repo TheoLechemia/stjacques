@@ -1,0 +1,21 @@
+<div class="cover">
+    <button (click)="right()" class="left"  mat-mini-fab>
+        <mat-icon>chevron_left</mat-icon>
+    </button>
+    <div class="caroussel" #slider > 
+            <app-patri-card
+            class="mb-3" 
+            *ngFor="let data of datas" 
+            [data]="data"
+            (mousedown) ="startDragging($event, false, slider)" 
+            (mouseup) ="stopDragging($event, false)" 
+            (mouseleave) ="stopDragging($event, false)" 
+            (mousemove)="moveEvent($event, slider)"
+        >
+        </app-patri-card>
+    
+    </div>
+    <button (click)="left()" class="right"  mat-mini-fab>
+        <mat-icon>chevron_right</mat-icon>
+    </button>
+</div>

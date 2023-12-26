@@ -32,6 +32,7 @@ import { SearchComponent } from './search/search.component';
 import { ResultsComponent } from './results/results.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { LocationComponent } from './location/location.component';
+import { CarousselComponent } from './caroussel/caroussel.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { LocationComponent } from './location/location.component';
     ResultsComponent,
     BreadcrumbComponent,
     LocationComponent,
+    CarousselComponent,
   ],
   imports: [
     BrowserModule,

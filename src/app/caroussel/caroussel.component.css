@@ -1,0 +1,45 @@
+.cover {
+    position: relative;
+}
+
+.left {
+    z-index:1000;
+    position: absolute;
+    left: 0;
+    top: 45%;
+}
+
+.right {
+    z-index:1000;
+    position: absolute;
+    right: 0;
+    top: 45%;
+}
+
+.caroussel {
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+}
+
+.caroussel app-patri-card {
+    width: 30vh;
+    margin-right: 15px;
+}
+
+::ng-deep mat-mdc-icon-button.mat-primary {
+    color:red!important
+}
+
+::ng-deep mat-mdc-button-persistent-ripple mdc-icon-button__ripple {
+    background-color: red!important
+}
+
+button {
+    background-color: #2929b383!important;
+    color: white!important
+}
+
+button:hover {
+    background-color: #2929B3!important;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from '../data.service';
 import { FormService } from '../form.service';
 import { ApiService } from '../api.service';
@@ -9,6 +9,11 @@ import { ApiService } from '../api.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('slider') slider: ElementRef;
+
+  public mouseDown = false;
+  startX: any;
+  scrollLeft: any;
   constructor(
     public dataService: DataService,
     public formService: FormService,
@@ -39,8 +44,6 @@ export class HomeComponent implements OnInit {
           }
         )
         .subscribe((data) => {
-          console.log(data);
-
           this.randomCards.push(...data);
         });
     });
