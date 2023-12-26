@@ -27,12 +27,7 @@ export class BreadcrumbService {
         distinctUntilChanged()
       )
       .subscribe((ev) => {
-        console.log('subscribeee');
-        console.log(this._route);
-        console.log((ev as any).url);
-
         const path = (ev as any).url;
-        console.log('HOPPP', path);
 
         if (path == '/') {
           this.items = [

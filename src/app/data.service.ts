@@ -24,6 +24,11 @@ export class DataService {
   public monumentsLieux = [];
   public personnesMorales = [];
   public personnesPhysiques = [];
+
+  public searchingMonu = false;
+  public searchingMobi = false;
+  public searchingPersP = false;
+  public searchingPersm = false;
   constructor(private api: ApiService, public formService: FormService) {
     this.api.getObjects('pays').subscribe((data) => {
       this.pays = data;
@@ -82,6 +87,7 @@ export class DataService {
     this.personnesPhysiques = [];
     const form = Object.assign({}, this.formService.form.value);
     if (form.searchOn.mobiliers_images) {
+      this.searchingMobi = true;
       let cleanedForm = this.cleanAndFormatForm(form, 'mobiliers_images');
       this.api
         .getObjectswithPost('mobiliers_images', cleanedForm, {
@@ -89,9 +95,11 @@ export class DataService {
         })
         .subscribe((data) => {
           this.mobiliersImages = data;
+          this.searchingMobi = false;
         });
     }
     if (form.searchOn.monuments_lieux) {
+      this.searchingMonu = true;
       let cleanedForm = this.cleanAndFormatForm(form, 'monuments_lieux');
       this.api
         .getObjectswithPost('monuments_lieux', cleanedForm, {
@@ -99,9 +107,11 @@ export class DataService {
         })
         .subscribe((data) => {
           this.monumentsLieux = data;
+          this.searchingMonu = false;
         });
     }
     if (form.searchOn.personnes_morales) {
+      this.searchingPersm = true;
       let cleanedForm = this.cleanAndFormatForm(form, 'personnes_morales');
       this.api
         .getObjectswithPost('personnes_morales', cleanedForm, {
@@ -109,9 +119,11 @@ export class DataService {
         })
         .subscribe((data) => {
           this.personnesMorales = data;
+          this.searchingPersm = false;
         });
     }
     if (form.searchOn.personnes_physiques) {
+      this.searchingPersP = true;
       let cleanedForm = this.cleanAndFormatForm(form, 'personnes_physiques');
       this.api
         .getObjectswithPost('personnes_physiques', cleanedForm, {
@@ -119,6 +131,7 @@ export class DataService {
         })
         .subscribe((data) => {
           this.personnesPhysiques = data;
+          this.searchingPersP = false;
         });
     }
   }

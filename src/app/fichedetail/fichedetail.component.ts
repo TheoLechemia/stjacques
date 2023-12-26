@@ -75,14 +75,13 @@ export class FichedetailComponent implements OnInit {
   loadData() {
     this._api.getObjects(`${this.categorie}/${this.id}`).subscribe((data) => {
       this.detailInfos = this.formatData(data);
-      console.log(this.detailInfos);
 
-      this.detailInfos.medias.forEach((media: any) => {
-        this.album.push({
+      this.album = this.detailInfos.medias.map((media: any) => {
+        return {
           src: media.url,
           caption: media.titre,
           thumb: media.url + '&h=500&w=500',
-        });
+        };
       });
     });
   }
@@ -103,7 +102,6 @@ export class FichedetailComponent implements OnInit {
     this._lightBox.open(this.album, i);
   }
   close(): void {
-    // close lightbox programmatically
     this._lightBox.close();
   }
 }

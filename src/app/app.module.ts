@@ -14,6 +14,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -49,6 +50,7 @@ import { CarousselComponent } from './caroussel/caroussel.component';
   ],
   imports: [
     BrowserModule,
+    MatProgressSpinnerModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     AppRoutingModule,

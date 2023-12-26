@@ -56,6 +56,7 @@ export class PatriCardComponent implements OnInit, OnChanges, AfterViewInit {
         ];
     }
   }
+
   onMouseDown($event: MouseEvent) {
     this.mousePosition.x = $event.screenX;
     this.mousePosition.y = $event.screenY;

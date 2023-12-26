@@ -1,5 +1,5 @@
 <div class="cover">
-    <button (click)="right()" class="left"  mat-mini-fab>
+    <button *ngIf="datas.length > 0" (click)="right()" class="left"  mat-mini-fab>
         <mat-icon>chevron_left</mat-icon>
     </button>
     <div class="caroussel" #slider > 
@@ -15,7 +15,7 @@
         </app-patri-card>
     
     </div>
-    <button (click)="left()" class="right"  mat-mini-fab>
+    <button *ngIf="datas.length > 0" (click)="left()" class="right"  mat-mini-fab>
         <mat-icon>chevron_right</mat-icon>
     </button>
 </div>
