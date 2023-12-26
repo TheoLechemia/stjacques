@@ -2,6 +2,10 @@
     width: auto!important;
 }
 
+mat-card {
+    width: 23vh;
+}
+
 .ico {
     position: absolute;
     left: 3%;
