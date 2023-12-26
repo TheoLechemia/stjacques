@@ -13,8 +13,7 @@ personnages, confréries... liés à saint Jacques
 
 </div>
 <div class="container">
-<form>
-  <div class="row center fs-3">
+  <div class="row text-center fs-3">
     <p>      
       Cet inventaire présente des synthèses des enregistrements d'une Base de données
       de la Fondation David Parou Saint-Jacques ( 3014 fiches au 18-08-2022).
@@ -25,44 +24,35 @@ personnages, confréries... liés à saint Jacques
       Effectuer une recherche pour afficher les fiches du patrimoine de saint Jacques
     </p>
   </div>
-  <div class="row mb-3">
-
-    <div class="col-10 center fs-4">
-      <a class="btn btn-primary btn-lg mb-4 mt-3" [routerLink]="['' ,'rechercher']">
-        Rechercher dans le patrimoine <br>
-        <mat-icon class="fs-2">search</mat-icon>
-      </a>
-      <mat-divider style="width: 20%; margin: 0 auto" class="mt-4 mb-4"></mat-divider>
-      <div class="fst-italic mb-3">
-        Classification de l’inventaire du patrimoine de saint Jacques
-      </div>
-    </div>
-
+  
+  <div class="row mb-4 text-center">
+    <a id="search-btn" class="btn btn-primary btn-lg mb-4 mt-3" [routerLink]="['' ,'rechercher']">
+      Rechercher dans le patrimoine <br>
+      <mat-icon class="fs-2">search</mat-icon>
+    </a>
+    <div class="fst-italic mb-3">
+    <mat-divider class="mt-4 mb-4"></mat-divider>
+    Classification de l’inventaire du patrimoine de saint Jacques
   </div>
-
-</form>
-
-<div class="row mb-4">
-
-  <div class="col-xl-3 col-sm-6 col-xs-12 center">
+  <div class="col-xl-3 col-sm-6 col-xs-12 text-center">
     <h3>Monuments & Lieux</h3>
     <h5>Regroupe les fiches de type Eglise, Chapelle, ... </h5>
     <img width="70" class="ico" src="../../assets/ico_monuments_lieux.png" alt="">
 
   </div>
-  <div class="col-xl-3 col-sm-6 col-xs-12 center">
+  <div class="col-xl-3 col-sm-6 col-xs-12 text-center">
     <h3>Mobiliers & Images</h3>
     <h5>Regroupe les fiches de type Croix, Relique, Tableaux, ...  </h5>
     <img width="70" class="ico" src="../../assets/ico_mobiliers_images.png" alt="">
 
   </div>
-  <div class="col-xl-3 col-sm-6 col-xs-12 center">
+  <div class="col-xl-3 col-sm-6 col-xs-12 text-center">
     <h3>Personnes Morales</h3>
     <h5>Regroupe les fiches de type Associations, Confréries, ...  </h5>
     <img width="70" class="ico" src="../../assets/ico_personnes_morales.png" alt="">
 
   </div>
-  <div class="col-xl-3 col-sm-6 col-xs-12 center">
+  <div class="col-xl-3 col-sm-6 col-xs-12 text-center">
     <h3>Personnes Physiques</h3>
     <h5>Regroupe les fiches de personnes ou de groupe de personnes.  </h5>
     <img width="70" class="ico" src="../../assets/ico_personnes_physiques.png" alt="">
@@ -72,18 +62,18 @@ personnages, confréries... liés à saint Jacques
 </div>
 
 <div class="primary-bg-color px-3 pb-3" id="random-block">
-  <h3 class="center py-3 white ">Patrimoines à découvrir</h3>
+  <h3 class="text-center py-3 white ">Patrimoines à découvrir</h3>
   <app-caroussel [datas]="randomCards"> </app-caroussel>
 
-    <div class="center-div mt-2">
-      <button (click)="loadRandom()"  class="btn btn-primary italic-title ">
+    <div class="text-center mt-2">
+      <button (click)="loadRandom()" id="refreshBtn"  class="btn italic-title ">
         <mat-icon id="refresh-icon" class="fs-1">refresh</mat-icon>  <br>
         <h5>Actualiser </h5> 
       </button>
     </div>
 
-<div class="mt-3">
-  <div class="center-div">
+<div class="mt-3 text-button">
+  <div class="text-center">
 
     <h4 class="italic-title">Pourquoi cet inventaire</h4>
   </div>
