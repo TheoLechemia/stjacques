@@ -91,7 +91,7 @@ export class DataService {
       let cleanedForm = this.cleanAndFormatForm(form, 'mobiliers_images');
       this.api
         .getObjectswithPost('mobiliers_images', cleanedForm, {
-          fields: ['medias', 'siecles'],
+          fields: ['medias', 'siecles', 'designations'],
         })
         .subscribe((data) => {
           this.mobiliersImages = data;
@@ -103,7 +103,7 @@ export class DataService {
       let cleanedForm = this.cleanAndFormatForm(form, 'monuments_lieux');
       this.api
         .getObjectswithPost('monuments_lieux', cleanedForm, {
-          fields: ['medias', 'siecles'],
+          fields: ['medias', 'siecles', 'natures'],
         })
         .subscribe((data) => {
           this.monumentsLieux = data;
@@ -115,7 +115,7 @@ export class DataService {
       let cleanedForm = this.cleanAndFormatForm(form, 'personnes_morales');
       this.api
         .getObjectswithPost('personnes_morales', cleanedForm, {
-          fields: ['medias', 'siecles'],
+          fields: ['medias', 'siecles', 'natures'],
         })
         .subscribe((data) => {
           this.personnesMorales = data;
@@ -127,7 +127,7 @@ export class DataService {
       let cleanedForm = this.cleanAndFormatForm(form, 'personnes_physiques');
       this.api
         .getObjectswithPost('personnes_physiques', cleanedForm, {
-          fields: ['medias', 'siecles'],
+          fields: ['medias', 'siecles', 'professions'],
         })
         .subscribe((data) => {
           this.personnesPhysiques = data;
