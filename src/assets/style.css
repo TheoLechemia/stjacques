@@ -60,3 +60,13 @@ body {
     --bs-btn-disabled-bg: #8C101C;
     --bs-btn-disabled-border-color: #8C101C;
 }
+
+/*###############################################################" */
+/*############ SURCOUCHE ##########################################" */
+
+/*################################" */
+/*############ HOME ####################" */
+
+#home-img {
+    background-image: url("../assets/jacquaire_home_enfeutoulouse.jpg");
+}
