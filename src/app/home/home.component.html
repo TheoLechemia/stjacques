@@ -15,42 +15,36 @@ personnages, confréries... liés à saint Jacques
 
 
 <div class="container">
-  <div class="row text-center fs-3">
+  <div class="row text-center fs-3 text-pres">
     <p>         
       Ce patrimoine est présent partout en Europe, sur et hors les chemins de Compostelle.
       Pourquoi cette chapelle Saint-Jacques au sommet d’une montagne ou au fond d’une campagne ? Cette relique de l’apôtre dans une église d’où vient-elle ? Pourquoi un hôpital Saint-Jacques ? Un quai Saint-Jacques ? Que sait-on des pèlerins ?
       <br>
       <br>
       Cet inventaire répond en détail à vos questions sur plus de 2000 éléments de ce patrimoine !
-    </p> 
-
-    
-    <p>
-      Effectuer une recherche pour afficher les fiches du patrimoine de saint Jacques
     </p>
   </div>
   
   <div class="row mb-4 text-center">
-    <a id="search-btn" class="btn btn-primary btn-lg mb-4 mt-3" [routerLink]="['' ,'rechercher']">
-      Rechercher dans le patrimoine <br>
-      <mat-icon class="fs-2">search</mat-icon>
-    </a>
-    <div class="fst-italic mb-3">
-    <mat-divider class="mt-4 mb-4"></mat-divider>
-    Classification de l’inventaire du patrimoine de saint Jacques
-  </div>
+    <div class="fst-italic mb-3 text-classif">
+      <mat-divider class="mt-4 mb-4"></mat-divider>
+      <p>Les informations sont extraites de la base de données de l’IRJ.
+      <br>
+      Les éléments sont répartis en quatre catégories.</p> 
+    </div>
+
   <div class="col-xl-3 col-sm-6 col-xs-12 text-center">
     <h3>Monuments & Lieux</h3>
     <h5>Regroupe les fiches de type Eglise, Chapelle, ... </h5>
     <img width="70" class="ico" src="../../assets/ico_monuments_lieux.png" alt="">
-
   </div>
+
   <div class="col-xl-3 col-sm-6 col-xs-12 text-center">
     <h3>Mobiliers & Images</h3>
     <h5>Regroupe les fiches de type Croix, Relique, Tableaux, ...  </h5>
     <img width="70" class="ico" src="../../assets/ico_mobiliers_images.png" alt="">
-
   </div>
+
   <div class="col-xl-3 col-sm-6 col-xs-12 text-center">
     <h3>Personnes Morales</h3>
     <h5>Regroupe les fiches de type Associations, Confréries, ...  </h5>
@@ -62,6 +56,13 @@ personnages, confréries... liés à saint Jacques
     <h5>Regroupe les fiches de personnes ou de groupe de personnes.  </h5>
     <img width="70" class="ico" src="../../assets/ico_personnes_physiques.png" alt="">
 
+  </div>
+
+  <div class="row mb-4 text-center div-search-btn">
+    <a id="search-btn" class="btn btn-primary btn-lg mb-4 mt-3" [routerLink]="['' ,'rechercher']">
+      Rechercher dans le patrimoine <br>
+      <mat-icon class="fs-2">search</mat-icon>
+    </a>
   </div>
 
 </div>

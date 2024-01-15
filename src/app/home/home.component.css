@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+
 #home-img {
-    height: 60vh;
+    height: 77vh;
     background-image: url("../../assets/jacquaire_home_enfeutoulouse.jpg");
     display: flex;
     background-position: bottom;
 
+}
+
+.text-pres {
+    font-size: 1.5rem !important;
+    margin: 3rem 0 2rem 0;
 }
 
 mat-divider {
@@ -35,14 +43,21 @@ app-patri-card {
 }
 
 #home-title {
-    padding-top: 10rem;
-    color: white;
-    font-weight: bold;
-    text-align: center;
+    font-family: 'Lora', serif;
     font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;  
+    color: #1a1a1a;
+    text-align: center;
     width: 50%;
+    padding-top: 25rem;
     margin-left: auto;
     margin-right: auto;
+}
+
+.text-classif > p {
+    font-size: 1.8rem;
+    margin: 3rem 0 2rem 0;
 }
 
 #refresh-icon {
@@ -53,6 +68,9 @@ app-patri-card {
     overflow: visible!important;
 }
 
+.div-search-btn {
+    margin: 4rem 0 4rem 0px!important;
+}
 
 .text-button {
     color: white;
