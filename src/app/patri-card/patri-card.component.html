@@ -6,7 +6,7 @@
   (mousedown)="onMouseDown($event)"
   (click)="nagigateToDetail($event, data.id, data.meta_categorie)"
   >
-  <img #img mat-card-image *ngIf="data.medias && data.medias.length > 0; else defaultImage" src="{{data.medias[0].url}}&h=200&w=200">
+  <img #img mat-card-image *ngIf="data.medias && data.medias.length > 0 && !data.medias[0].url.endsWith('.bmp'); else defaultImage" src="{{data.medias[0].url}}&h=200&w=200">
   <ng-template #defaultImage>
     <img #img mat-card-image width="200"  src="assets/ico_{{data.meta_categorie}}.png" alt="">
   </ng-template>
