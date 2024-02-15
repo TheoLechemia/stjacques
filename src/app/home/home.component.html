@@ -8,7 +8,6 @@ personnages, confréries... liés à saint Jacques
 
   <h1 id="home-title">
     Patrimoine mobilier et immobilier, pèlerins, personnages, confréries...
-    liés à saint Jacques
   </h1>
 
 </div>
@@ -16,47 +15,53 @@ personnages, confréries... liés à saint Jacques
 
 <div class="container">
   <div class="row text-center fs-3 text-pres">
-    <p>         
-      Ce patrimoine est présent partout en Europe, sur et hors les chemins de Compostelle.
-      Pourquoi cette chapelle Saint-Jacques au sommet d’une montagne ou au fond d’une campagne ? Cette relique de l’apôtre dans une église d’où vient-elle ? Pourquoi un hôpital Saint-Jacques ? Un quai Saint-Jacques ? Que sait-on des pèlerins ?
+    <p>Ce patrimoine est présent partout en Europe, sur et hors les chemins de Compostelle.
       <br>
       <br>
-      Cet inventaire répond en détail à vos questions sur plus de 2000 éléments de ce patrimoine !
-    </p>
+    Pourquoi cette chapelle Saint-Jacques au sommet d’une montagne ou au fond d’une campagne ? Cette relique de l’apôtre dans une église d’où vient-elle ? Pourquoi un hôpital Saint-Jacques ? Un quai Saint-Jacques ? Que sait-on des pèlerins ?
+      <br>
+      <br>
+    Cet inventaire répond en détail à vos questions sur plus de 2000 éléments de ce patrimoine !</p>
   </div>
-  
+
+
+ <!-- ### BLOC CATEGORIES ### -->
+
   <div class="row mb-4 text-center">
     <div class="fst-italic mb-3 text-classif">
-      <mat-divider class="mt-4 mb-4"></mat-divider>
+      <mat-divider class="mt-4 mb-4 separator"></mat-divider>
       <p>Les informations sont extraites de la base de données de l’IRJ.
       <br>
       Les éléments sont répartis en quatre catégories.</p> 
     </div>
 
-  <div class="col-xl-3 col-sm-6 col-xs-12 text-center">
+  <div class="col-xl-3 col-sm-6 col-xs-12 text-center bloc-cat">
     <h3>Monuments & Lieux</h3>
-    <h5>Regroupe les fiches de type Eglise, Chapelle, ... </h5>
+    <p>Regroupe les fiches de type Eglise, Chapelle, ... </p>
     <img width="70" class="ico" src="../../assets/ico_monuments_lieux.png" alt="">
   </div>
 
-  <div class="col-xl-3 col-sm-6 col-xs-12 text-center">
+  <div class="col-xl-3 col-sm-6 col-xs-12 text-center bloc-cat">
     <h3>Mobiliers & Images</h3>
-    <h5>Regroupe les fiches de type Croix, Relique, Tableaux, ...  </h5>
+    <p>Regroupe les fiches de type Croix, Relique, Tableaux, ...  </p>
     <img width="70" class="ico" src="../../assets/ico_mobiliers_images.png" alt="">
   </div>
 
-  <div class="col-xl-3 col-sm-6 col-xs-12 text-center">
+  <div class="col-xl-3 col-sm-6 col-xs-12 text-center bloc-cat">
     <h3>Personnes Morales</h3>
-    <h5>Regroupe les fiches de type Associations, Confréries, ...  </h5>
+    <p>Regroupe les fiches de type Associations, Confréries, ...  </p>
     <img width="70" class="ico" src="../../assets/ico_personnes_morales.png" alt="">
 
   </div>
-  <div class="col-xl-3 col-sm-6 col-xs-12 text-center">
+  <div class="col-xl-3 col-sm-6 col-xs-12 text-center bloc-cat">
     <h3>Personnes Physiques</h3>
-    <h5>Regroupe les fiches de personnes ou de groupe de personnes.  </h5>
+    <p>Regroupe les fiches de personnes ou de groupe de personnes.  </p>
     <img width="70" class="ico" src="../../assets/ico_personnes_physiques.png" alt="">
 
   </div>
+
+
+ <!-- ### BTN RECHERCHER ### -->
 
   <div class="row mb-4 text-center div-search-btn">
     <a id="search-btn" class="btn btn-primary btn-lg mb-4 mt-3" [routerLink]="['' ,'rechercher']">
@@ -67,29 +72,32 @@ personnages, confréries... liés à saint Jacques
 
 </div>
 
+
+ <!-- ### BLOC RANDOM ### -->
+
 <div class="primary-bg-color px-3 pb-3" id="random-block">
-  <h3 class="text-center py-3 white ">Patrimoines à découvrir</h3>
+  <h3 class="text-center py-3 white italic-title">Patrimoines à découvrir</h3>
   <app-caroussel [datas]="randomCards"> </app-caroussel>
 
     <div class="text-center mt-2">
       <button (click)="loadRandom()" id="refreshBtn"  class="btn italic-title ">
-        <mat-icon id="refresh-icon" class="fs-1">refresh</mat-icon>  <br>
-        <h5>Actualiser </h5> 
+        <mat-icon id="refresh-icon" class="fs-1">refresh</mat-icon>
+        <br>
+        <h5 class="white">Actualiser</h5> 
       </button>
     </div>
+</div>
+
+
+ <!-- ### BLOC TEXT BAS ### -->
 
 <div class="mt-3 text-button">
-  <div class="text-center">
-
-    <h4 class="italic-title">Pourquoi cet inventaire</h4>
-    <p>
-      Cet inventaire est destiné à l’information de larges publics désirant mieux connaître le patrimoine Saint-Jacques. En le publiant, l’IRJ appelle tous les organismes français et étrangers possédant des informations sur des éléments de ce patrimoine à enrichir cet inventaire. Pour construire ensemble un inventaire beaucoup plus riche des traces artistiques diverses héritées des cultes et pèlerinages à saint Jacques.
-  
-  Les personnes et organismes intéressés peuvent s’adresser à inventaire@institut-irj.f
-    </p>
+  <div class="text-center bottom-text">
+    <h4 class="italic-title">Pourquoi cet inventaire ?</h4>
+    <p>Cet inventaire est destiné à l’information de larges publics désirant mieux connaître le patrimoine Saint-Jacques. En le publiant, l’IRJ appelle tous les organismes français et étrangers possédant des informations sur des éléments de ce patrimoine à enrichir cet inventaire. Pour construire ensemble un inventaire beaucoup plus riche des traces artistiques diverses héritées des cultes et pèlerinages à saint Jacques.</p>
+    <p class="">Les personnes et organismes intéressés peuvent s’adresser à inventaire@institut-irj.fr</p>
   </div>
     
 </div>
 
 
-</div>

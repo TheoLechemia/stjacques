@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+h1, h2, h3, h4, h5, p {
+    color: #343434;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Lora', serif;
+}
+
+p {
+    font-family:"Roboto", sans-serif;
+}
+
 #center-search {
     background-color: #2929B3;
     padding: 5rem;
@@ -6,10 +22,32 @@
 
 .white {
     color: white;
-    font-weight: bold;
 }
-
 
 .blue {
     color: #2929B3
+}
+
+/*###############################################################" */
+/*############ SURCOUCHE ##########################################" */
+.cat-title {
+    font-weight: 600;
+}
+
+.container-fluid {
+    --bs-gutter-x: 0;
+}
+
+.valid-rech {
+    margin: 4rem 0 4rem 0;
+    font-weight: 400;
+}
+
+.valid-rech p{
+    font-weight: 400;
+}
+
+.valid-rech p {
+    font-size: 1.2rem;
+    padding: 2.5rem 0 0.5rem 0;
 }

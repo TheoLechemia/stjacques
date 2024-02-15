@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+h1, h2, h3, h4, h5, p {
+    color: #343434;
+}
+
+p {
+    font-family:"Roboto", sans-serif;
+}
+
 .white {
     color:white!important
 }
@@ -12,3 +24,32 @@
 .navbar.navbar-inverse .navbar-header{
 float: none; 
 }
+
+/*###############################################################" */
+/*############ SURCOUCHE ##########################################" */
+
+.header-logo {
+    padding: 0.5rem;
+}
+
+.header-text {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+#footer {
+    background-color: #343434;
+    padding: 2rem 1rem;
+}
+
+#footer * {
+    color: #ffffff !important;
+}
+
