@@ -1,7 +1,5 @@
 <div class="mt-1" *ngIf="breadcrumbService.items.length >1">
-    
     <a class="pe-4 clickable" [routerLink]="breadcrumbService.items[breadcrumbService.items.length -2]?.path">
-
         <mat-icon  class="center-verticaly ">arrow_back</mat-icon>
         Retour
     </a>
