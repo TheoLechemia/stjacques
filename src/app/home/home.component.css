@@ -20,11 +20,6 @@ p {
     background-position: bottom;
 }
 
-.text-pres {
-    font-size: 1.5rem !important;
-    margin: 3rem 0 2rem 0;
-}
-
 mat-divider {
     width: 20%;
     margin: 0 auto;
@@ -117,10 +112,18 @@ app-patri-card {
 
 /*###############################################################" */
 /*############ SURCOUCHE ##########################################" */
+.text-pres {
+    font-size: 1.5rem !important;
+    margin: 3rem 0 2rem 0;
+}
+
 .text-classif > p {
     font-size: 1.8rem;
     font-style: normal;
-    margin: 3rem 0 2rem 0;
+}
+
+.text-classif-2 {
+    font-size: 1.2rem;
 }
 
 .bloc-cat h3 {
@@ -144,6 +147,17 @@ app-patri-card {
 
 
 /*############ RANDOM #############" */
+#random-block {
+    margin: 0 8rem;
+}
+
+#random-block p:nth-child(2){
+    padding: 0 10rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+
 #refreshBtn {
     margin: 1rem 0;
     padding: 0.2rem 2rem;

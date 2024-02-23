@@ -1,9 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+h1, h2, h3, h4, h5, p, b, div {
+    color: #343434;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lora', serif;
+}
+
+h5, p, b, div {
+    font-family:"Roboto", sans-serif;
+}
+
+
 .caroussel {
     display: flex;
     overflow-x: auto;
-
 }
 
 .caroussel app-patri-card {
     margin-right: 10px;
+}
+
+
+/*############################################################### */
+/*############ SURCOUCHE #########################################*/
+.result-caroussel h3 {
+    font-style: italic;
+    font-weight: 600;
+}
+
+.your-research-block {
+    padding: 0rem 2rem 0 1rem!important;
+}
+
+.your-research-block b {
+    font-weight: 400;
+}
+
+.your-research-block h5 {
+    font-style: italic;
+    font-weight: 600;
 }

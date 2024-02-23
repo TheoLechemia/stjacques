@@ -14,12 +14,12 @@
     <mat-card-header>
       <div class="row">
         <small *ngIf="showCategorie" class="muted"> {{data.categorie}}</small> 
-        <div *ngIf="data.title; else elseBlock">
-          {{ (data.title?.length>30)? (data.title | slice:0:30)+'...':(data.title) }}
+        <div *ngIf="data.title; else elseBlock " class="patri-card-title">
+          {{ (data.title?.length>38)? (data.title | slice:0:38)+'...':(data.title) }}
         </div>
         <ng-template #elseBlock>
-          <div>
-            {{ (data.prenom_nom_pers_phy?.length>30)? (data.prenom_nom_pers_phy | slice:0:30)+'...':(data.prenom_nom_pers_phy) }}
+          <div class="patri-card-title">
+            {{ (data.prenom_nom_pers_phy?.length>38)? (data.prenom_nom_pers_phy | slice:0:38)+'...':(data.prenom_nom_pers_phy) }}
           </div>
 
         </ng-template>

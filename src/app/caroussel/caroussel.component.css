@@ -42,3 +42,9 @@ button {
 button:hover {
     background-color: #2929B3!important;
 }
+
+/*############################################################### */
+/*############ SURCOUCHE #########################################*/
+.caroussel-block {
+    padding: 0 4rem;
+}

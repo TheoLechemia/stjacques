@@ -1,64 +1,69 @@
 
-<div class="container-fluid mt-3">
+<div class="container-fluid mt-4 result-title">
   <div class="row">
-    <div class="col-2 ">
-        <h5>Votre recherche</h5>
-        <b>Recherche simple</b>
-        <mat-card>
-          <mat-card-content>
-            <div *ngIf="formData.general.pays.length > 0">
-              Pays : <span *ngFor="let item of formData.general.pays" > {{item.name}}  </span>
-            </div>
-            <div *ngIf="formData.general.regions.length > 0">
-              Régions : <span *ngFor="let item of formData.general.regions" > {{item.name}}  </span>
-            </div>
-            <div *ngIf="formData.general.departements.length > 0">
-              Département : <span *ngFor="let item of formData.general.departements" > {{item.name}}  </span>
-            </div>
-            <div *ngIf="formData.general.communes.length > 0">
-              Communes : <span *ngFor="let item of formData.general.communes" > {{item.name}}  </span>
-            </div>
-            <div *ngIf="formData.general.siecles.length > 0">
-              Siècles : <span *ngFor="let item of formData.general.siecles" > {{item.name}}  </span>
-            </div>
-          </mat-card-content>
 
-        </mat-card>
+<!-- ###### BLOCK YOUR RESEARCH ########### -->
+    <div class="col-2 your-research-block">
+        <h5 class="mb-3">Votre recherche</h5>
+        <b>Recherche simple</b>
+          <mat-card class="mb-3">
+            <mat-card-content>
+              <div *ngIf="formData.general.pays.length > 0">
+                Pays : <span *ngFor="let item of formData.general.pays" > {{item.name}}  </span>
+              </div>
+              <div *ngIf="formData.general.regions.length > 0">
+                Régions : <span *ngFor="let item of formData.general.regions" > {{item.name}}  </span>
+              </div>
+              <div *ngIf="formData.general.departements.length > 0">
+                Département : <span *ngFor="let item of formData.general.departements" > {{item.name}}  </span>
+              </div>
+              <div *ngIf="formData.general.communes.length > 0">
+                Communes : <span *ngFor="let item of formData.general.communes" > {{item.name}}  </span>
+              </div>
+              <div *ngIf="formData.general.siecles.length > 0">
+                Siècles : <span *ngFor="let item of formData.general.siecles" > {{item.name}}  </span>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        
         <b>Monuments & Lieux</b>
-        <mat-card>
-          <mat-card-content>
-            <div *ngIf="formData.monuments_lieux.natures_monu.length > 0">
-              Natures : <span *ngFor="let item of formData.monuments_lieux.natures_monu" > {{item.name}}  </span>
-            </div>
-            <div *ngIf="formData.monuments_lieux.etats_conservation.length > 0">
-              Etats de conservation : <span *ngFor="let item of formData.monuments_lieux.etats_conservation" > {{item.name}}  </span>
-            </div>
-          </mat-card-content>
-        </mat-card>
+          <mat-card class="mb-3">
+            <mat-card-content>
+              <div *ngIf="formData.monuments_lieux.natures_monu.length > 0">
+                Natures : <span *ngFor="let item of formData.monuments_lieux.natures_monu" > {{item.name}}  </span>
+              </div>
+              <div *ngIf="formData.monuments_lieux.etats_conservation.length > 0">
+                Etats de conservation : <span *ngFor="let item of formData.monuments_lieux.etats_conservation" > {{item.name}}  </span>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
         <b>Mobiliers & Images</b>
-        <mat-card>
-          <mat-card-content>
-            <div *ngIf="formData.mobiliers_images.designations.length > 0">
-              Désignations : <span *ngFor="let item of formData.mobiliers_images.designations" > {{item.name}}  </span>
-            </div>
-            <div *ngIf="formData.mobiliers_images.techniques.length > 0">
-              Techniques : <span *ngFor="let item of formData.mobiliers_images.techniques" > {{item.name}}  </span>
-            </div>
-            <div *ngIf="formData.mobiliers_images.etats_conservation.length > 0">
-              Etats de conservation : <span *ngFor="let item of formData.mobiliers_images.etats_conservation" > {{item.name}}  </span>
-            </div>
-          </mat-card-content>
-        </mat-card>
+          <mat-card class="mb-3">
+            <mat-card-content>
+              <div *ngIf="formData.mobiliers_images.designations.length > 0">
+                Désignations : <span *ngFor="let item of formData.mobiliers_images.designations" > {{item.name}}  </span>
+              </div>
+              <div *ngIf="formData.mobiliers_images.techniques.length > 0">
+                Techniques : <span *ngFor="let item of formData.mobiliers_images.techniques" > {{item.name}}  </span>
+              </div>
+              <div *ngIf="formData.mobiliers_images.etats_conservation.length > 0">
+                Etats de conservation : <span *ngFor="let item of formData.mobiliers_images.etats_conservation" > {{item.name}}  </span>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        
         <b>Personnes morales</b>
-        <mat-card>
-          <mat-card-content>
-            <div *ngIf="formData.personnes_morales.natures_pers.length > 0">
-              Natures : <span *ngFor="let item of formData.personnes_morales.natures_pers" > {{item.name}}  </span>
-            </div>
-          </mat-card-content>
-        </mat-card>
+          <mat-card class="mb-3">
+            <mat-card-content>
+              <div *ngIf="formData.personnes_morales.natures_pers.length > 0">
+                Natures : <span *ngFor="let item of formData.personnes_morales.natures_pers" > {{item.name}}  </span>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
         <b>Personnes physiques</b>
-        <mat-card>
+        <mat-card class="mb-4">
           <mat-card-content>
             <div *ngIf="formData.personnes_physiques.professions.length > 0">
               Professions : <span *ngFor="let item of formData.personnes_physiques.natures_pers" > {{item.name}}  </span>
@@ -71,9 +76,12 @@
       
         <a class="btn btn-primary mt-3" [routerLink]="['/rechercher']" >Modifier la recherche</a>
     </div>
-    <div class="col-10">
-        <div *ngIf="formService.form.value.searchOn.monuments_lieux" >
-            <h3>Monuments & Lieux</h3>
+
+
+<!-- ###### BLOCK RESULT CAROUSSEL ########### -->
+    <div class="col-10 result-caroussel">
+        <div *ngIf="formService.form.value.searchOn.monuments_lieux" class="mb-5">
+            <h3 class="mb-3">Monuments & Lieux</h3>
             <div class="row">
                 <h5 *ngIf="!dataService.searchingMonu && dataService.monumentsLieux.length == 0"> Aucun résultat trouvé </h5>
                 <div class="text-center">
@@ -84,9 +92,9 @@
                 </div>
               </div>
         </div>
-        <div *ngIf="formService.form.value.searchOn.mobiliers_images" >
 
-            <h3>Mobiliers & Images</h3>
+        <div *ngIf="formService.form.value.searchOn.mobiliers_images" class="mb-5">
+            <h3 class="mb-3">Mobiliers & Images</h3>
             <div class="row mb-3">
               <h5 *ngIf=" !dataService.searchingMobi && dataService.mobiliersImages.length == 0"> Aucun résultat trouvé </h5>
               <div class="text-center">
@@ -96,11 +104,10 @@
                   <app-caroussel [datas]="dataService.mobiliersImages"> </app-caroussel>
                 </div>
               </div>
-
         </div>
-        <div *ngIf="formService.form.value.searchOn.personnes_physiques" >
 
-            <h3>Personnes Physiques</h3>
+        <div *ngIf="formService.form.value.searchOn.personnes_physiques" class="mb-5">
+            <h3 class="mb-3">Personnes Physiques</h3>
             <div class="row mb-3">
                 <h5 *ngIf="!dataService.searchingPersP && dataService.personnesPhysiques.length == 0"> Aucun résultat trouvé </h5>
                 <div class="text-center">
@@ -111,8 +118,9 @@
                 </div>
               </div>
         </div>
-        <div *ngIf="formService.form.value.searchOn.personnes_morales" >
-            <h3>Personnes Morales</h3>
+
+        <div *ngIf="formService.form.value.searchOn.personnes_morales" class="mb-5">
+            <h3 class="mb-3">Personnes Morales</h3>
             <div class="row mb-3">
               <h5 *ngIf=" !dataService.searchingPersm && dataService.personnesMorales.length == 0"> Aucun résultat trouvé </h5>
               <div class="text-center">
@@ -120,7 +128,6 @@
               </div>
                 <div class="col">
                   <app-caroussel [datas]="dataService.personnesMorales"> </app-caroussel>
-
                 </div>
               </div>
         </div>
