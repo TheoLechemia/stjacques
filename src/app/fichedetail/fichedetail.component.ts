@@ -66,7 +66,6 @@ export class FichedetailComponent implements OnInit {
     this._routing.params.subscribe((params) => {
       this.id = params['id_fiche'];
       this.categorie = params['categorie'];
-      this.mapping = this._config.config.DETAIL_MAPPING[this.categorie];
       this.loadData();
     });
     window.scroll(0, 0);

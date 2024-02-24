@@ -1,0 +1,114 @@
+// @use '@angular/material' as mat;
+// @include mat-core();
+// @import '@angular/material/theming';
+
+
+// $my-app-primary: mat-palette($mat-blue-grey);
+// $my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+// $my-app-warn:    mat-palette($mat-deep-orange);
+// // $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+// $my-app-theme: mat.define-light-theme((
+//  color: (
+//    primary: $my-primary,
+//    accent: $my-accent,
+//  ),
+//  typography: mat.define-typography-config(),
+//  density: 0,
+// ));
+// @include angular-material-theme($my-app-theme);
+
+
+
+
+
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+@import '@angular/material/theming';
+
+
+$my-blue: (
+    50 : #e5e5f6,
+    100 : #bfbfe8,
+    200 : #9494d9,
+    300 : #6969ca,
+    400 : #4949be,
+    500 : #2929b3,
+    600 : #2424ac,
+    700 : #1f1fa3,
+    800 : #19199a,
+    900 : #0f0f8b,
+    A100 : #bcbcff,
+    A200 : #8989ff,
+    A400 : #5656ff,
+    A700 : #3c3cff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+/* For use in src/lib/core/theming/_palette.scss */
+$my-red: (
+    50 : #f1e2e4,
+    100 : #ddb7bb,
+    200 : #c6888e,
+    300 : #af5860,
+    400 : #9d343e,
+    500 : #8c101c,
+    600 : #840e19,
+    700 : #790c14,
+    800 : #6f0911,
+    900 : #5c0509,
+    A100 : #ff8e91,
+    A200 : #ff5b5f,
+    A400 : #ff282d,
+    A700 : #ff0f14,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+$my-app-primary: mat-palette($my-red);
+$my-app-accent:  mat-palette($my-blue);
+$my-app-warn:    mat-palette($mat-deep-orange);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-app-primary,
+   accent: $my-app-accent,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+@include mat.all-component-themes($my-theme);

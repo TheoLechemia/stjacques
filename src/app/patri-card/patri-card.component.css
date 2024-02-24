@@ -10,6 +10,11 @@ h1, h2, h3, h4, h5, p, div {
     width: auto!important;
 }
 
+.default-img {
+    margin: 0 auto;
+    width: 80%;
+}
+
 mat-card {
     width: 23vh;
 }

@@ -1,17 +1,3 @@
 {
-    "API_ENDPOINT": "https://stjacq.jnld.xyz",
     "INTERNAL_API_ENDPOINT": "http://127.0.0.1:5000",
-    "API_TOKEN": "Ym3GFXz_est7WtRlJ5CMUAQg8m5tg5h8svfESO6X",
-    "DETAIL_MAPPING" : {
-        "TPersMorales": {},
-        "TMonumentsLieux" : {
-            "title": "TitreMonuLieu",
-            "subTitle": "",
-            "description": "Description",
-            "localite": "LocLieuxDits"
-
-        },
-        "TPersPhysiques": "Personne physique",
-        "TMobiliersImages": "Mobilier et & image"
-    }
 }
