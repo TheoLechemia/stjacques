@@ -55,7 +55,7 @@ export class PatriCardComponent implements OnInit, OnChanges, AfterViewInit {
           this.mapping[changes['data']['currentValue']['meta_categorie']]
         ];
         if(temp && temp.length > 0) {
-          this.data.subtitle = temp.toString(", ");
+          this.data.subtitle = temp.join(", ");
         }
         else {
           this.data.subtitle = null;
