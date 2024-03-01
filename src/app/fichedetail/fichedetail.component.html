@@ -87,7 +87,31 @@
                         <div matListItemTitle>Materiaux</div>
                         <div matListItemLine> <span *ngFor="let mat of detailInfos.materiaux">{{mat}}</span> </div>
                     </mat-list-item>
-                  </mat-list>
+                    <mat-list-item>
+                      <mat-icon matListItemIcon>edit</mat-icon>
+                      <div matListItemTitle>Rédacteurs</div>
+                      <div matListItemLine> <span *ngFor="let red of detailInfos.redacteurs">{{red}}</span> </div>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <mat-icon matListItemIcon>edit</mat-icon>
+                    <div matListItemTitle>Contributeurs</div>
+                    <div matListItemLine> <span *ngFor="let contrib of detailInfos.contributeurs">{{contrib}}</span> 
+                      <span *ngIf="detailInfos?.contributeurs.length == 0"> - </span>
+
+                    </div>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <mat-icon matListItemIcon>schedule</mat-icon>
+                    <div matListItemTitle>Date de création  </div>
+                    <div matListItemLine> {{detailInfos.date_creation}} </div>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <mat-icon matListItemIcon>schedule</mat-icon>
+                    <div matListItemTitle>Date de mise à jour  </div>
+                    <div matListItemLine> {{detailInfos.date_maj}} </div>
+                  </mat-list-item>
+
+              </mat-list>
               </div>
 
               <div class="col-6">
@@ -106,6 +130,30 @@
                       <div matListItemTitle>Siècle</div>
                       <div matListItemLine> <span *ngFor="let siecle of detailInfos.siecles" >{{siecle}}</span> </div>
                     </mat-list-item>
+                    <mat-list-item>
+                      <mat-icon matListItemIcon>edit</mat-icon>
+                      <div matListItemTitle>Rédacteurs</div>
+                      <div matListItemLine> <span *ngFor="let red of detailInfos.redacteurs">{{red}}</span> </div>
+                    </mat-list-item>
+                    <mat-list-item>
+                      <mat-icon matListItemIcon>edit</mat-icon>
+                      <div matListItemTitle>Contributeurs</div>
+                      <div matListItemLine> <span *ngFor="let contrib of detailInfos.contributeurs">{{contrib}}</span> 
+                        <span *ngIf="detailInfos?.contributeurs.length == 0"> - </span>
+
+                      </div>
+                    </mat-list-item>
+                    <mat-list-item>
+                      <mat-icon matListItemIcon>schedule</mat-icon>
+                      <div matListItemTitle>Date de création  </div>
+                      <div matListItemLine> {{detailInfos.date_creation}} </div>
+                    </mat-list-item>
+                    <mat-list-item>
+                      <mat-icon matListItemIcon>schedule</mat-icon>
+                      <div matListItemTitle>Date de mise à jour  </div>
+                      <div matListItemLine> {{detailInfos.date_maj}} </div>
+                    </mat-list-item>
+
                   </mat-list>
                 </div>
 
@@ -134,7 +182,31 @@
                       <mat-icon matListItemIcon>schedule</mat-icon>
                       <div matListItemTitle>Periode historique</div>
                       <div matListItemLine> <span *ngFor="let period of detailInfos.periodes_historiques" >{{period}}</span> </div>
-                    </mat-list-item>  
+                    </mat-list-item>
+                    <mat-list-item>
+                      <mat-icon matListItemIcon>edit</mat-icon>
+                      <div matListItemTitle>Rédacteurs</div>
+                      <div matListItemLine> <span *ngFor="let red of detailInfos.redacteurs">{{red}}</span> </div>
+                    </mat-list-item>
+                    <mat-list-item>
+                      <mat-icon matListItemIcon>edit</mat-icon>
+                      <div matListItemTitle>Contributeurs</div>
+                      <div matListItemLine> 
+                        <span *ngFor="let contrib of detailInfos.contributeurs">{{contrib}}</span> 
+                        <span *ngIf="detailInfos?.contributeurs.length == 0"> - </span>
+                      </div>
+                    </mat-list-item>
+                    <mat-list-item>
+                      <mat-icon matListItemIcon>schedule</mat-icon>
+                      <div matListItemTitle>Date de création  </div>
+                      <div matListItemLine> {{detailInfos.date_creation}} </div>
+                    </mat-list-item>
+                    <mat-list-item>
+                      <mat-icon matListItemIcon>schedule</mat-icon>
+                      <div matListItemTitle>Date de mise à jour  </div>
+                      <div matListItemLine> {{detailInfos.date_maj}} </div>
+                    </mat-list-item>
+
                   </mat-list>
                 </div>
 
