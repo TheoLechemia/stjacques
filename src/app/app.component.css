@@ -46,10 +46,24 @@ float: none;
 
 #footer {
     background-color: #343434;
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem;
 }
 
-#footer * {
-    color: #ffffff !important;
+#footer *{
+    color: #ffffff;
 }
 
+.footer-link a:hover {
+    color: #8C101C !important;
+}
+
+.footer-link a {
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.jnld {
+    color: #e83151 !important;
+}
+
+#exampleModal{ z-index: 10000; }

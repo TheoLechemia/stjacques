@@ -12,7 +12,8 @@ h1, h2, h3, h4, h5, p, div {
 
 .default-img {
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
+    padding-top: 1rem;
 }
 
 mat-card {

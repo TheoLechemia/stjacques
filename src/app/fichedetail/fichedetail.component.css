@@ -104,6 +104,10 @@ mat-divider {
       margin-bottom: 1rem;
 }
 
+mat-list-item {
+      height: 55px!important;
+}
+
 .central-content-block {
       margin: 2rem 0;
       padding: 0;

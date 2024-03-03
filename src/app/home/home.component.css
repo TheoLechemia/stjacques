@@ -15,8 +15,8 @@ p {
 }
 
 #home-img {
-    height: 77vh;
-    background-image: url("../../assets/jacquaire_home_enfeutoulouse.jpg");
+    height: 90vh;
+    background-image: url("../../assets/patrimoine_jacquaire_home.jpg");
     background-position: bottom;
 }
 
@@ -51,14 +51,15 @@ app-patri-card {
 }
 
 #home-title {
+    width: 80%!important;
     font-family: "Roboto", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 2.6rem!important;
+    font-weight: 800;
     font-style: italic;  
-    color: #74110a;
+    color: #2929B3;
     text-align: center;
     width: 50%;
-    padding-top: 25rem;
+    padding-top: 42rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -113,17 +114,18 @@ app-patri-card {
 /*###############################################################" */
 /*############ SURCOUCHE ##########################################" */
 .text-pres {
-    font-size: 1.5rem !important;
-    margin: 3rem 0 2rem 0;
+    font-size: 1.2rem !important;
+    margin: 3rem 0 rem 0;
 }
 
 .text-classif > p {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-style: normal;
 }
 
 .text-classif-2 {
     font-size: 1.2rem;
+    padding: 2rem 6rem;
 }
 
 .bloc-cat h3 {
@@ -132,13 +134,13 @@ app-patri-card {
 }
 
 .bloc-cat p {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
 /*############ BTN RECH #############" */
 .div-search-btn {
-    margin: 4rem 0 4rem 0px!important;
+    margin: 1rem 0 2rem 0!important;
 }
 
 .text-button {
