@@ -14,12 +14,6 @@ p {
     font-family:"Roboto", sans-serif;
 }
 
-#home-img {
-    height: 90vh;
-    background-image: url("../../assets/patrimoine_jacquaire_home.jpg");
-    background-position: bottom;
-}
-
 mat-divider {
     width: 20%;
     margin: 0 auto;
@@ -50,18 +44,25 @@ app-patri-card {
     cursor: grab;
 }
 
-#home-title {
-    width: 80%!important;
+.home-legend {
     font-family: "Roboto", sans-serif;
-    font-size: 2.6rem!important;
+    font-size: 1rem!important;
+    font-weight: 800;
+    font-style: italic;  
+    color: #343434;
+    text-align: right;
+    margin: 0.1rem 2rem 1rem 0
+}
+
+#home-title {
+    
+    font-size: 2.2rem!important;
     font-weight: 800;
     font-style: italic;  
     color: #2929B3;
     text-align: center;
-    width: 50%;
-    padding-top: 42rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0.5rem 1rem
+
 }
 
 #refresh-icon {
