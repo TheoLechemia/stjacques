@@ -36,12 +36,23 @@ float: none;
     font-family: 'Lora', serif;
     font-style: italic;
     font-size: 2rem;
-    margin: 0 auto;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100%;
 }
+
+@media (max-width: 576px) {
+    .header-text {
+        font-size: 1.5rem;
+        justify-content: center;
+        height: 100%;
+    }
+    .header-logo {
+        padding: 0;
+        width: 10%;
+    }
+  }
+  
 
 
 #footer {
@@ -65,5 +76,18 @@ float: none;
 .jnld {
     color: #e83151 !important;
 }
+
+
+@media (max-width: 576px) {
+    #footer {
+        padding: 1.2rem 1rem;
+    }
+    .footer-link {
+        margin-bottom: 1rem;
+    }
+    .footer-menu {
+        margin-top: 2rem;
+    }
+  }
 
 #exampleModal{ z-index: 10000; }

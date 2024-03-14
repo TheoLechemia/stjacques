@@ -44,27 +44,6 @@ app-patri-card {
     cursor: grab;
 }
 
-.home-legend {
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem!important;
-    font-weight: 400;
-    font-style: italic;  
-    color: #343434;
-    text-align: right;
-    margin: 0.1rem 2rem 1rem 0
-}
-
-#home-title {
-    
-    font-size: 2.2rem!important;
-    font-weight: 800;
-    font-style: italic;  
-    color: #2929B3;
-    text-align: center;
-    margin: 0.5rem 1rem
-
-}
-
 #refresh-icon {
     margin-right: 10px;
 }
@@ -114,14 +93,58 @@ app-patri-card {
 
 /*###############################################################" */
 /*############ SURCOUCHE ##########################################" */
+.home-legend {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem!important;
+    font-weight: 400;
+    font-style: italic;  
+    color: #343434;
+    text-align: right;
+    margin: 0.1rem 2rem 1rem 0
+}
+
+#home-title {
+    
+    font-size: 2.2rem!important;
+    font-weight: 800;
+    font-style: italic;  
+    color: #2929B3;
+    text-align: center;
+    margin: 0rem 1rem
+}
+
 .text-pres {
     font-size: 1.2rem !important;
-    margin: 3rem 0 rem 0;
+    margin: 3rem 0 1rem 0;
 }
+
+@media (max-width: 576px) {
+    .home-img img {
+        padding: 0.4rem 0.8rem 0 0.8rem;
+    }
+    .home-legend {
+        font-size: 0.6rem!important;
+        padding: 0.2rem 2rem;
+        text-align: center;
+        margin: 0
+    }
+    #home-title {    
+        font-size: 1.8rem!important;
+        margin: 0.5rem 0.5rem
+    }
+    .text-pres {
+        font-size: 1rem !important;
+        margin: 1rem 0 0 0;
+    }
+    
+  }
+
+
 
 .text-classif > p {
     font-size: 1.4rem;
     font-style: normal;
+    padding-top: 0.5rem;
 }
 
 .text-classif-2 {
@@ -138,6 +161,20 @@ app-patri-card {
     font-size: 1rem;
 }
 
+@media (max-width: 576px) {
+    .text-classif > p {
+        font-size: 1.2rem;
+    }
+    .bloc-cat img {
+        margin-bottom: 2.4rem;
+    }
+    .text-classif-2 {
+        font-size: 1rem;
+        padding: 0rem 1rem;
+    }
+  }
+
+
 
 /*############ BTN RECH #############" */
 .div-search-btn {
@@ -147,6 +184,12 @@ app-patri-card {
 .text-button {
     color: white;
 }
+
+@media (max-width: 576px) {
+    #search-btn {
+        width: 75%;
+    }
+  }
 
 
 /*############ RANDOM #############" */
@@ -174,6 +217,23 @@ app-patri-card {
     font-size: 2rem;   
 }
 
+@media (max-width: 576px) {
+    #random-block {
+        margin: 0 0.5rem;
+    }
+    #random-block p:nth-child(2){
+        padding: 0 0.2rem 2rem 0.2rem;
+        font-size: 1rem;
+    }
+    #random-block h3 {
+        font-size: 1.6rem;   
+    }
+    #refreshBtn {
+        margin: 0.5rem 0;
+        padding: 0.4rem 2.4rem 0.2rem 2.4rem;
+    }
+  }
+
 
 /*############ TEXTE BAS #############" */
 .bottom-text {
@@ -193,4 +253,21 @@ app-patri-card {
 .bottom-text p:last-of-type {
     font-weight: 700;
     font-size: 1.3rem;
+  }
+
+  @media (max-width: 576px) {
+    .bottom-text {
+        margin: 2rem 0;
+     }
+    .bottom-text h4 {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    .bottom-text p {
+        margin: 1rem 1rem 0 1rem;
+        font-size: 1rem;
+    }
+    .bottom-text-ctc {
+        font-size: 1.2rem!important;
+    }
   }

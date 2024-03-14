@@ -40,3 +40,17 @@
 .caroussel-block {
     padding: 0 4rem;
 }
+
+@media (max-width: 576px) {
+    .caroussel-block {
+        padding: 0;
+    }
+    .caroussel-block button {
+        display: none;
+    }
+    .caroussel app-patri-card {
+        margin-right: 10px;
+    }    
+  }
+
+
