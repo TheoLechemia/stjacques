@@ -68,32 +68,32 @@
 <!-- ###### SIECLE AND CO MONU LIEUX & MOB IMG ########### -->
           <div *ngIf="detailInfos.meta_categorie == 'monuments_lieux' || detailInfos.meta_categorie == 'mobiliers_images'">
             <div class="row">
-              <div class="col-6">
+              <div class="col-md-6 col-sm-12">
                   <mat-list>
                     <mat-list-item>
-                        <mat-icon matListItemIcon>schedule</mat-icon>
+                        <mat-icon matListItemIcon class="up-block-ico">schedule</mat-icon>
                         <div matListItemTitle>Siècle</div>
                         <div matListItemLine> <span *ngFor="let siecle of detailInfos.siecles" >{{siecle}}</span> </div>
                     </mat-list-item>
                       
                     <mat-list-item>
-                        <mat-icon matListItemIcon>safety_check</mat-icon>
+                        <mat-icon matListItemIcon  class="up-block-ico">safety_check</mat-icon>
                         <div matListItemTitle>Etat de conservation</div>
                         <div matListItemLine> <span *ngFor="let etat of detailInfos.etats_conservation">{{etat}}</span> </div>
                     </mat-list-item>
                       
                     <mat-list-item>
-                        <mat-icon matListItemIcon>category</mat-icon>
+                        <mat-icon matListItemIcon class="up-block-ico">category</mat-icon>
                         <div matListItemTitle>Materiaux</div>
                         <div matListItemLine> <span *ngFor="let mat of detailInfos.materiaux">{{mat}}</span> </div>
                     </mat-list-item>
                     <mat-list-item>
-                      <mat-icon matListItemIcon>edit</mat-icon>
+                      <mat-icon matListItemIcon class="up-block-ico">edit</mat-icon>
                       <div matListItemTitle>Rédacteurs</div>
                       <div matListItemLine> <span *ngFor="let red of detailInfos.redacteurs">{{red}}</span> </div>
                   </mat-list-item>
                   <mat-list-item>
-                    <mat-icon matListItemIcon>edit</mat-icon>
+                    <mat-icon matListItemIcon class="up-block-ico">edit</mat-icon>
                     <div matListItemTitle>Contributeurs</div>
                     <div matListItemLine> <span *ngFor="let contrib of detailInfos.contributeurs">{{contrib}}</span> 
                       <span *ngIf="detailInfos?.contributeurs.length == 0"> - </span>
@@ -101,12 +101,12 @@
                     </div>
                   </mat-list-item>
                   <mat-list-item>
-                    <mat-icon matListItemIcon>schedule</mat-icon>
+                    <mat-icon matListItemIcon class="up-block-ico">schedule</mat-icon>
                     <div matListItemTitle>Date de création  </div>
                     <div matListItemLine> {{detailInfos.date_creation}} </div>
                   </mat-list-item>
                   <mat-list-item>
-                    <mat-icon matListItemIcon>schedule</mat-icon>
+                    <mat-icon matListItemIcon class="up-block-ico">schedule</mat-icon>
                     <div matListItemTitle>Date de mise à jour  </div>
                     <div matListItemLine> {{detailInfos.date_maj}} </div>
                   </mat-list-item>
@@ -114,7 +114,7 @@
               </mat-list>
               </div>
 
-              <div class="col-6">
+              <div class="col-md-6 col-sm-12">
                 <app-location [detailInfos]="detailInfos" ></app-location>
               </div>
             </div>
@@ -126,17 +126,17 @@
                 <div class="col-6">
                   <mat-list>
                     <mat-list-item>
-                      <mat-icon matListItemIcon>schedule</mat-icon>
+                      <mat-icon matListItemIcon class="up-block-ico">schedule</mat-icon>
                       <div matListItemTitle>Siècle</div>
                       <div matListItemLine> <span *ngFor="let siecle of detailInfos.siecles" >{{siecle}}</span> </div>
                     </mat-list-item>
                     <mat-list-item>
-                      <mat-icon matListItemIcon>edit</mat-icon>
+                      <mat-icon matListItemIcon class="up-block-ico">edit</mat-icon>
                       <div matListItemTitle>Rédacteurs</div>
                       <div matListItemLine> <span *ngFor="let red of detailInfos.redacteurs">{{red}}</span> </div>
                     </mat-list-item>
                     <mat-list-item>
-                      <mat-icon matListItemIcon>edit</mat-icon>
+                      <mat-icon matListItemIcon class="up-block-ico">edit</mat-icon>
                       <div matListItemTitle>Contributeurs</div>
                       <div matListItemLine> <span *ngFor="let contrib of detailInfos.contributeurs">{{contrib}}</span> 
                         <span *ngIf="detailInfos?.contributeurs.length == 0"> - </span>
@@ -144,12 +144,12 @@
                       </div>
                     </mat-list-item>
                     <mat-list-item>
-                      <mat-icon matListItemIcon>schedule</mat-icon>
+                      <mat-icon matListItemIcon class="up-block-ico">schedule</mat-icon>
                       <div matListItemTitle>Date de création  </div>
                       <div matListItemLine> {{detailInfos.date_creation}} </div>
                     </mat-list-item>
                     <mat-list-item>
-                      <mat-icon matListItemIcon>schedule</mat-icon>
+                      <mat-icon matListItemIcon class="up-block-ico">schedule</mat-icon>
                       <div matListItemTitle>Date de mise à jour  </div>
                       <div matListItemLine> {{detailInfos.date_maj}} </div>
                     </mat-list-item>
@@ -169,27 +169,27 @@
                 <div class="col-6">
                   <mat-list>
                     <mat-list-item>
-                      <mat-icon matListItemIcon>schedule</mat-icon>
+                      <mat-icon matListItemIcon class="up-block-ico">schedule</mat-icon>
                       <div matListItemTitle>Siècle</div>
                       <div matListItemLine> <span *ngFor="let siecle of detailInfos.siecles" >{{siecle}}</span> </div>
                     </mat-list-item>
                     <mat-list-item>
-                      <mat-icon matListItemIcon>directions_walk</mat-icon>
+                      <mat-icon matListItemIcon class="up-block-ico">directions_walk</mat-icon>
                       <div matListItemTitle>Modes de déplacement</div>
                       <div matListItemLine> <span *ngFor="let mode of detailInfos.modes_deplacements" >{{mode}}</span> </div>
                     </mat-list-item>
                     <mat-list-item>
-                      <mat-icon matListItemIcon>schedule</mat-icon>
+                      <mat-icon matListItemIcon class="up-block-ico">schedule</mat-icon>
                       <div matListItemTitle>Periode historique</div>
                       <div matListItemLine> <span *ngFor="let period of detailInfos.periodes_historiques" >{{period}}</span> </div>
                     </mat-list-item>
                     <mat-list-item>
-                      <mat-icon matListItemIcon>edit</mat-icon>
+                      <mat-icon matListItemIcon class="up-block-ico">edit</mat-icon>
                       <div matListItemTitle>Rédacteurs</div>
                       <div matListItemLine> <span *ngFor="let red of detailInfos.redacteurs">{{red}}</span> </div>
                     </mat-list-item>
                     <mat-list-item>
-                      <mat-icon matListItemIcon>edit</mat-icon>
+                      <mat-icon matListItemIcon class="up-block-ico">edit</mat-icon>
                       <div matListItemTitle>Contributeurs</div>
                       <div matListItemLine> 
                         <span *ngFor="let contrib of detailInfos.contributeurs">{{contrib}}</span> 
@@ -197,12 +197,12 @@
                       </div>
                     </mat-list-item>
                     <mat-list-item>
-                      <mat-icon matListItemIcon>schedule</mat-icon>
+                      <mat-icon matListItemIcon class="up-block-ico">schedule</mat-icon>
                       <div matListItemTitle>Date de création  </div>
                       <div matListItemLine> {{detailInfos.date_creation}} </div>
                     </mat-list-item>
                     <mat-list-item>
-                      <mat-icon matListItemIcon>schedule</mat-icon>
+                      <mat-icon matListItemIcon class="up-block-ico">schedule</mat-icon>
                       <div matListItemTitle>Date de mise à jour  </div>
                       <div matListItemLine> {{detailInfos.date_maj}} </div>
                     </mat-list-item>
@@ -264,7 +264,7 @@
 <!-- ###### RELATED CARD ############################## -->
 <!-- ################################################## -->  
 
-  <div class="row mt-3 related-cards-block">
+  <div class="row related-cards-block">
     <div class="col-12">
       <div class="card">
         <h2 class="card-header">  Fiches liées</h2>

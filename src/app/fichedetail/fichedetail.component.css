@@ -46,12 +46,6 @@ p {
       cursor: pointer;
 }
 
-@media (max-width:576px) {
-      #lightBoxRow {
-      margin-top:2rem            
-      }
-}
-
 .detail-body {
       background-color: #f2f2f2;
 }
@@ -134,3 +128,31 @@ mat-list-item {
       border-color: #343434;
       padding: 1rem 0;
 }
+
+.related-cards-block {
+      padding-bottom: 3rem;
+}
+
+
+
+@media (max-width: 576px) {
+      .global-block {
+            padding: 1rem 0;
+      }
+      .top-right-block {
+            padding: 1rem 0.5rem;
+      }
+      .mat-divider-top {
+            margin-bottom: 0rem;
+      }
+      .up-block-ico {
+            margin: 1rem 0.5rem 0 0 !important;
+      }
+      .central-content {
+            font-size: 1.2rem;
+      }
+      .related-cards-block {
+            margin-top: 0 !important;
+            padding: 0 0 2rem 0;
+      }
+    }
