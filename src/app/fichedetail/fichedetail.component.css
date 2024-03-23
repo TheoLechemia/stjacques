@@ -142,14 +142,27 @@ mat-list-item {
       .top-right-block {
             padding: 1rem 0.5rem;
       }
+      .cat-subtitle {
+            font-size: 1rem;
+      }
+      .title-card h1 {
+            font-size: 1.4rem;
+      }
+      .cat-subtitle-bis h3 {
+            font-size: 1.2rem;
+      }
       .mat-divider-top {
+            width: 20%;
             margin-bottom: 0rem;
       }
       .up-block-ico {
             margin: 1rem 0.5rem 0 0 !important;
       }
       .central-content {
-            font-size: 1.2rem;
+            font-size: 1rem;
+      }
+      .mat-divider-bottom {
+            width: 25%;
       }
       .related-cards-block {
             margin-top: 0 !important;

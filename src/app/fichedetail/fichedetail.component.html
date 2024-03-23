@@ -30,7 +30,7 @@
       <mat-card>
         <mat-card-header>
         <mat-card-subtitle>
-          <div class="mb-1 remind-cat">
+          <div class="mb-1 remind-cat cat-subtitle">
             {{detailInfos.categorie}}
           </div>  
         </mat-card-subtitle>
@@ -46,19 +46,19 @@
               <ng-template #other> <h1>{{detailInfos.title}} </h1></ng-template>
 
 <!-- ###### SUBTITLE CARD ########### -->
-              <div *ngIf="detailInfos.meta_categorie == 'monuments_lieux'">
+              <div *ngIf="detailInfos.meta_categorie == 'monuments_lieux'" class="cat-subtitle-bis">
                 <h3> <span *ngFor="let nature of detailInfos.natures"> {{nature}} </span></h3>
               </div>
               
-              <div *ngIf="detailInfos.meta_categorie == 'mobiliers_images'">
+              <div *ngIf="detailInfos.meta_categorie == 'mobiliers_images'" class="cat-subtitle-bis">
                 <h3><span *ngFor="let des of detailInfos.designations"> {{des}} </span></h3>
               </div>
 
-              <div *ngIf="detailInfos.meta_categorie == 'personnes_morales'">
+              <div *ngIf="detailInfos.meta_categorie == 'personnes_morales'" class="cat-subtitle-bis">
                 <h3> <span *ngFor="let nature of detailInfos.natures"> {{nature}} </span></h3>
               </div>
 
-              <div *ngIf="detailInfos.meta_categorie == 'personnes_physiques'">
+              <div *ngIf="detailInfos.meta_categorie == 'personnes_physiques'" class="cat-subtitle-bis">
                 <h3> <span *ngFor="let prof of detailInfos.professions"> {{prof}} </span></h3>
               </div>
           </div>

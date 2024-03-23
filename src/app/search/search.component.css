@@ -71,6 +71,9 @@ p {
     .search-text {
         margin: 2rem 0;
     }
+    .cont-valid-rech {
+        margin: 4rem 0 2rem 0;
+    }
     #center-search {
         padding: 2rem 1rem 3rem 1rem;
     }
