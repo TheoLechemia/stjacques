@@ -43,3 +43,22 @@ h5, p, b, div {
     font-style: italic;
     font-weight: 600;
 }
+
+.your-research-block btn {
+    margin-top: 1rem;
+}
+
+.result-list {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 576px) {
+    .your-research-block {
+        margin-bottom: 3rem;
+    }
+    .result-list {
+        margin-bottom: 0rem;
+    }
+
+
+  }
