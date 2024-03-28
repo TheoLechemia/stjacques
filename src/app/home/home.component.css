@@ -74,7 +74,6 @@ app-patri-card {
     height: 100%;
 }
 
-
 #main-search {
     min-width: 150px;
     max-width: 500px;
@@ -91,8 +90,8 @@ app-patri-card {
 }
 
 
-/*###############################################################" */
-/*############ SURCOUCHE ##########################################" */
+/*##########################################################*/
+/*############ SURCOUCHE ###################################*/
 .home-legend {
     font-family: "Roboto", sans-serif;
     font-size: 1rem!important;
@@ -134,11 +133,8 @@ app-patri-card {
     .text-pres {
         font-size: 1rem !important;
         margin: 1rem 0 0 0;
-    }
-    
+    }    
   }
-
-
 
 .text-classif > p {
     font-size: 1.4rem;
@@ -180,8 +176,7 @@ app-patri-card {
   }
 
 
-
-/*############ BTN RECH #############" */
+/*############ BTN RECH ############*/
 .div-search-btn {
     margin: 1rem 0 2rem 0!important;
 }
@@ -196,8 +191,7 @@ app-patri-card {
     }
   }
 
-
-/*############ RANDOM #############" */
+/*############ RANDOM #############*/
 #random-block {
     margin: 0 8rem;
 }
@@ -240,7 +234,7 @@ app-patri-card {
   }
 
 
-/*############ TEXTE BAS #############" */
+/*############ TEXTE BAS ############*/
 .bottom-text {
     margin: 4rem 0;
  }
