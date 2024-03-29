@@ -8,7 +8,7 @@
           <div class="card mb-3" >
             <img *ngIf="album.length > 0; else defaultImage" class="main-img" (click)="open(0)" [src]="album[0]?.thumb">
             <ng-template #defaultImage>
-            <img  class="main-img"  width="300" src="assets/ico_{{detailInfos.meta_categorie}}.png" alt="">
+            <img  class="main-img"  width="300" src="assets/ico_{{detailInfos.meta_categorie}}_x250.png" alt="">
             </ng-template>
           </div>
         </div>
