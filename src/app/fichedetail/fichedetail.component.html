@@ -231,12 +231,12 @@
             <mat-card-content>
               <div *ngIf="detailInfos.histoire" class="central-content">
                 <div> Histoire : </div>
-                {{detailInfos.histoire}}
+                <span [innerHTML]="detailInfos.histoire | safeHTML"> </span>
               </div>
 
               <div *ngIf="detailInfos.description" class="central-content">
-                <div> Description : </div>
-                {{detailInfos.description}}
+                <div> Description : </div>  
+                <span [innerHTML]="detailInfos.description | safeHTML"> </span>
               </div>
   
               <mat-divider class="mat-divider-bottom"></mat-divider>

@@ -35,6 +35,7 @@ import { ResultsComponent } from './results/results.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { LocationComponent } from './location/location.component';
 import { CarousselComponent } from './caroussel/caroussel.component';
+import { SafeHTMLPipe } from './safe-html.pipe';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { CarousselComponent } from './caroussel/caroussel.component';
     BreadcrumbComponent,
     LocationComponent,
     CarousselComponent,
+    SafeHTMLPipe,
   ],
   imports: [
     BrowserModule,
