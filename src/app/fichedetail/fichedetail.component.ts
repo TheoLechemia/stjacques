@@ -38,11 +38,20 @@ export class FichedetailComponent implements OnInit {
       'source',
       'bibliographie',
       'auteurs',
+      'historique',
+      'statuts',
+      'acte_fondation',
+      "commentaires"
     ],
     personnes_physiques: [
       'source',
       'bibliographie',
       'auteurs',
+      "elements_biographiques",
+      "nature_evenement",
+      "attestation",
+      "commutation_voeu",
+      "elements_pelerinage"
     ],
   };
 
