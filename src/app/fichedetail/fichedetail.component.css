@@ -98,6 +98,10 @@ mat-divider {
       margin-bottom: 1rem;
 }
 
+.mat-list-line {
+      margin-right: 0.5rem;
+}
+
 mat-list-item {
       height: 55px!important;
 }
