@@ -246,7 +246,8 @@
                   <tbody>
                     <tr *ngFor="let item of detailInfos.advanced_fields | keyvalue" > 
                       <td> {{item.key}} </td>
-                      <td *ngIf="item.value != null" [innerHTML]="item.value | safeHTML"></td>
+                      <td *ngIf="item.value != null; else tdElse" [innerHTML]="item.value | safeHTML"></td>
+                      <ng-template #tdElse> <td> - </td></ng-template>
                     </tr>  
                   </tbody>
                 </table>

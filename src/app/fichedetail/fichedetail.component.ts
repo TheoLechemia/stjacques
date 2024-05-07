@@ -40,6 +40,7 @@ export class FichedetailComponent implements OnInit {
       'auteurs',
       'historique',
       'statuts',
+      'texte_statuts',
       'acte_fondation',
       "commentaires"
     ],
