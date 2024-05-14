@@ -44,7 +44,7 @@ export class FichedetailComponent implements OnInit {
 
     ],
     personnes_physiques: [
-      {"key": "elements_biographiques", "label": "Eléments bibliographiques"},
+      {"key": "elements_biographiques", "label": "Eléments biographiques"},
       {"key": "nature_evenement", "label": "Nature événement"},
       {"key": "attestation", "label": "Attestation"},
       {"key": "commutation_voeu", "label": "Communtation des voeux"},
