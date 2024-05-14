@@ -21,38 +21,56 @@ export class FichedetailComponent implements OnInit {
   public categorie: string;
   public detailInfos: any = {};
   public mapping: any;
-  public advancedFields: any = {
+  // champs au dessus du tableau
+  public middleFields:any = {
     monuments_lieux: [
-      'geolocalisation',
-      'source',
-      'bibliographie',
-      'auteurs',
-      'geolocalisation',
+      {"key": "description", "label": "Description"},
+      {"key": "histoire", "label": "Histoire"},
+      {"key": "protection_commentaires", "label": "Commentaire sur la protection"},
     ],
     mobiliers_images: [
-      'source',
-      'bibliographie',
-      'auteurs',
+      {"key": "description", "label": "Description"},
+      {"key": "historique", "label": "Historique"},
+      {"key": "lieu_conservation", "label": "Lieu de conservation"},
+      {"key": "lieu_origine", "label": "Lieu d'origine"},
+      {"key": "protection_commentaires", "label": "COmmentaire sur la protection"},
     ],
     personnes_morales: [
-      'source',
-      'bibliographie',
-      'auteurs',
-      'historique',
-      'statuts',
-      'texte_statuts',
-      'acte_fondation',
-      "commentaires"
+      {"key": "historique", "label": "Historique"},
+      {"key": "statuts", "label": "Statuts"},
+      {"key": "text_statuts", "label": "Texte statuts"},
+      {"key": "acte_fondation", "label": "Acte de fondation"},
+      {"key": "commentaires", "label": "Commentaires"},
+
     ],
     personnes_physiques: [
-      'source',
-      'bibliographie',
-      'auteurs',
-      "elements_biographiques",
-      "nature_evenement",
-      "attestation",
-      "commutation_voeu",
-      "elements_pelerinage"
+      {"key": "elements_biographiques", "label": "Eléments bibliographiques"},
+      {"key": "nature_evenement", "label": "Nature événement"},
+      {"key": "attestation", "label": "Attestation"},
+      {"key": "commutation_voeu", "label": "Communtation des voeux"},
+      {"key": "elements_pelerinage", "label": "Eléments de pélerinage"},
+
+    ],
+  }
+  // champs du tableau en bas
+  public advancedFields: any = {
+    monuments_lieux: [
+      {"key": "geolocalisation", "label": "Géolocalisation"},
+      {"key": "source", "label": "Source"},
+      {"key": "bibliographie", "label": "Bibliographie"},
+      {"key": "source", "label": "Source"},
+    ],
+    mobiliers_images: [
+      {"key": "bibliographie", "label": "Bibliographie"},
+      {"key": "source", "label": "Source"},
+    ],
+    personnes_morales: [
+      {"key": "bibliographie", "label": "Bibliographie"},
+      {"key": "source", "label": "Source"},
+    ],
+    personnes_physiques: [
+      {"key": "bibliographie", "label": "Bibliographie"},
+      {"key": "source", "label": "Source"},
     ],
   };
 
@@ -67,7 +85,7 @@ export class FichedetailComponent implements OnInit {
 
   loadData() {
     this._api.getObjects(`${this.categorie}/${this.id}`).subscribe((data) => {
-      this.detailInfos = this.formatData(data);
+      this.detailInfos = data
 
       this.album = this.detailInfos.medias.map((media: any) => {
         return {
@@ -79,17 +97,6 @@ export class FichedetailComponent implements OnInit {
     });
   }
 
-  formatData(data: any) {
-    const tmp: any = {};
-    for (let key in data) {
-      if (this.advancedFields[data.meta_categorie].includes(key)) {
-        tmp[key] = data[key];
-      }
-    }
-    data['advanced_fields'] = tmp;
-
-    return data;
-  }
 
   open(i: number) {
     this._lightBox.open(this.album, i);

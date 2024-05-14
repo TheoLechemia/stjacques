@@ -228,25 +228,24 @@
       <div class="row central-content-block">
         <div class="col">
           <mat-card>
-            <mat-card-content>
-              <div *ngIf="detailInfos.histoire" class="central-content">
-                <div> Histoire : </div>
-                <span [innerHTML]="detailInfos.histoire | safeHTML"> </span>
-              </div>
-
-              <div *ngIf="detailInfos.description" class="central-content">
-                <div> Description : </div>  
-                <span [innerHTML]="detailInfos.description | safeHTML"> </span>
+            <mat-card-content *ngIf="detailInfos.meta_categorie">
+              <div *ngFor="let item of middleFields[detailInfos.meta_categorie]">
+                <div *ngIf="detailInfos[item.key] != null">
+                  <div class="bold  other-info">
+                    {{item.label}}
+                  </div>
+                  <span [innerHTML]="detailInfos[item.key] | safeHTML"> </span>
+                </div>
               </div>
   
-              <mat-divider class="mat-divider-bottom"></mat-divider>
+              <mat-divider class="mat-divider-bottom mt-3"></mat-divider>
 
-              <div class="bold mb-3 other-info"> Autres informations : </div>
+              <div *ngIf="detailInfos.meta_categorie" class="bold mb-3 other-info"> Autres informations : </div>
                 <table class="table table-striped col-6">
                   <tbody>
-                    <tr *ngFor="let item of detailInfos.advanced_fields | keyvalue" > 
-                      <td> {{item.key}} </td>
-                      <td *ngIf="item.value != null; else tdElse" [innerHTML]="item.value | safeHTML"></td>
+                    <tr *ngFor="let item of advancedFields[detailInfos.meta_categorie]" > 
+                      <td> {{item.label}} </td>
+                      <td *ngIf="detailInfos[item.key] != null; else tdElse" [innerHTML]="detailInfos[item.key] | safeHTML"></td>
                       <ng-template #tdElse> <td> - </td></ng-template>
                     </tr>  
                   </tbody>
