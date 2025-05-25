@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     this.randomCards = [];
     [
       ['monuments_lieux', 'natures'],
-      ['mobiliers_images', 'designations'],
+      ['mobiliers_images', 'natures'],
       ['personnes_morales', 'natures'],
       ['personnes_physiques', 'professions'],
     ].forEach((params: Array<any>) => {
@@ -39,7 +39,9 @@ export class HomeComponent implements OnInit {
           {
             limit: 3,
             random: 'true',
-            fields: ['medias', 'siecles', params[1]],
+            fields: ['medias', 'siecles',
+               //params[1] ? pas utilisé ?
+              ],
             has_medias: true,
           }
         )

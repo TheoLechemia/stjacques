@@ -28,7 +28,7 @@ export class PatriCardComponent implements OnInit, OnChanges, AfterViewInit {
 
   public mapping: any = {
     monuments_lieux: 'natures',
-    mobiliers_images: 'designations',
+    mobiliers_images: 'natures',
     personnes_morales: 'natures',
     personnes_physiques: 'professions',
   };

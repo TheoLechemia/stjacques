@@ -49,7 +49,6 @@ export class FichedetailComponent implements OnInit {
       {"key": "attestation", "label": "Attestation"},
       {"key": "commutation_voeu", "label": "Communtation des voeux"},
       {"key": "elements_pelerinage", "label": "Eléments de pélerinage"},
-
     ],
   }
   // champs du tableau en bas

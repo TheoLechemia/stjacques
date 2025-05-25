@@ -51,7 +51,7 @@
               </div>
               
               <div *ngIf="detailInfos.meta_categorie == 'mobiliers_images'" class="cat-subtitle-bis">
-                <h3><span *ngFor="let des of detailInfos.designations"> {{des}} </span></h3>
+                <h3><span *ngFor="let nat of detailInfos.natures"> {{nat}} </span></h3>
               </div>
 
               <div *ngIf="detailInfos.meta_categorie == 'personnes_morales'" class="cat-subtitle-bis">
@@ -90,14 +90,12 @@
                     <mat-list-item>
                       <mat-icon matListItemIcon class="up-block-ico">edit</mat-icon>
                       <div matListItemTitle>Rédacteurs</div>
-                      <div matListItemLine> <span *ngFor="let red of detailInfos.redacteurs" class="mat-list-line">{{red}}</span> </div>
+                      <div matListItemLine> <span *ngFor="let aut of detailInfos.auteurs_fiche" class="mat-list-line">{{aut}}</span> </div>
                   </mat-list-item>
                   <mat-list-item>
                     <mat-icon matListItemIcon class="up-block-ico">edit</mat-icon>
                     <div matListItemTitle>Contributeurs</div>
-                    <div matListItemLine> <span *ngFor="let contrib of detailInfos.contributeurs">{{contrib}}</span> 
-                      <span *ngIf="detailInfos?.contributeurs.length == 0"> - </span>
-
+                    <div matListItemLine> {{detailInfos.contributeurs}}
                     </div>
                   </mat-list-item>
                   <mat-list-item>
@@ -133,15 +131,12 @@
                     <mat-list-item>
                       <mat-icon matListItemIcon class="up-block-ico">edit</mat-icon>
                       <div matListItemTitle>Rédacteurs</div>
-                      <div matListItemLine> <span *ngFor="let red of detailInfos.redacteurs">{{red}}</span> </div>
+                      <div matListItemLine> <span *ngFor="let aut of detailInfos.auteurs_fiche">{{aut}}</span> </div>
                     </mat-list-item>
                     <mat-list-item>
                       <mat-icon matListItemIcon class="up-block-ico">edit</mat-icon>
                       <div matListItemTitle>Contributeurs</div>
-                      <div matListItemLine> <span *ngFor="let contrib of detailInfos.contributeurs">{{contrib}}</span> 
-                        <span *ngIf="detailInfos?.contributeurs.length == 0"> - </span>
-
-                      </div>
+                      <div matListItemLine>{{detailInfos.contributeurs}} </div>
                     </mat-list-item>
                     <mat-list-item>
                       <mat-icon matListItemIcon class="up-block-ico">schedule</mat-icon>
@@ -186,14 +181,13 @@
                     <mat-list-item>
                       <mat-icon matListItemIcon class="up-block-ico">edit</mat-icon>
                       <div matListItemTitle>Rédacteurs</div>
-                      <div matListItemLine> <span *ngFor="let red of detailInfos.redacteurs">{{red}}</span> </div>
+                      <div matListItemLine> <span *ngFor="let aut of detailInfos.auteurs_fiche">{{aut}}</span> </div>
                     </mat-list-item>
                     <mat-list-item>
                       <mat-icon matListItemIcon class="up-block-ico">edit</mat-icon>
                       <div matListItemTitle>Contributeurs</div>
                       <div matListItemLine> 
-                        <span *ngFor="let contrib of detailInfos.contributeurs">{{contrib}}</span> 
-                        <span *ngIf="detailInfos?.contributeurs.length == 0"> - </span>
+                        {{detailInfos.contributeurs}}
                       </div>
                     </mat-list-item>
                     <mat-list-item>

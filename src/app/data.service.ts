@@ -15,7 +15,7 @@ export class DataService {
   public countries = [];
   public naturesMonu = [];
   public etatsConservations = [];
-  public designationsMob = [];
+  public naturesMob = [];
   public techniquesMob = [];
   public naturesPersoMo = [];
   public professions = [];
@@ -48,8 +48,8 @@ export class DataService {
     this.api.getObjects('etats_conservation').subscribe((data) => {
       this.etatsConservations = data;
     });
-    this.api.getObjects('designations_mob').subscribe((data) => {
-      this.designationsMob = data;
+    this.api.getObjects('natures_mob').subscribe((data) => {
+      this.naturesMob = data;
     });
     this.api.getObjects('techniques_mob').subscribe((data) => {
       this.techniquesMob = data;
@@ -91,7 +91,7 @@ export class DataService {
       let cleanedForm = this.cleanAndFormatForm(form, 'mobiliers_images');
       this.api
         .getObjectswithPost('mobiliers_images', cleanedForm, {
-          fields: ['medias', 'siecles', 'designations'],
+          fields: ['medias', 'siecles', 'natures'],
         })
         .subscribe((data) => {
           this.mobiliersImages = data;
