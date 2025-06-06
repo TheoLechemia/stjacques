@@ -1,4 +1,7 @@
-<mat-card  
+<a [routerLink]="['/', 'detail', data.meta_categorie, data.id]">
+
+
+<mat-card
   class="clickable-card" 
   (mousedown)="onMouseDown($event)"
   (click)="nagigateToDetail($event, data.id, data.meta_categorie)"
@@ -41,3 +44,5 @@
 
 
   </mat-card>
+
+</a>

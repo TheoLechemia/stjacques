@@ -47,19 +47,36 @@
 
 <!-- ###### SUBTITLE CARD ########### -->
               <div *ngIf="detailInfos.meta_categorie == 'monuments_lieux'" class="cat-subtitle-bis">
-                <h3> <span *ngFor="let nature of detailInfos.natures"> {{nature}} </span></h3>
+                <h3> 
+                  <span *ngFor="let nature of detailInfos.natures; let last=last"> 
+                    {{nature}}
+                    <span *ngIf="!last"> |</span>
+                  </span>
+                </h3>
               </div>
               
               <div *ngIf="detailInfos.meta_categorie == 'mobiliers_images'" class="cat-subtitle-bis">
-                <h3><span *ngFor="let nat of detailInfos.natures"> {{nat}} </span></h3>
+                <h3><span *ngFor="let nat of detailInfos.natures; let last=last"> 
+                      {{nat}}
+                    <span *ngIf="!last"> |</span>
+                     </span>
+                  </h3>
               </div>
 
               <div *ngIf="detailInfos.meta_categorie == 'personnes_morales'" class="cat-subtitle-bis">
-                <h3> <span *ngFor="let nature of detailInfos.natures"> {{nature}} </span></h3>
+                <h3> <span *ngFor="let nature of detailInfos.natures; let last=last"> 
+                    {{nature}} 
+                    <span *ngIf="!last"> |</span>
+
+                  </span>
+                </h3>
               </div>
 
               <div *ngIf="detailInfos.meta_categorie == 'personnes_physiques'" class="cat-subtitle-bis">
-                <h3> <span *ngFor="let prof of detailInfos.professions"> {{prof}} </span></h3>
+                <h3> <span *ngFor="let prof of detailInfos.professions; let last=last;">
+                   {{prof}} 
+                    <span *ngIf="!last"> |</span>
+                  </span></h3>
               </div>
           </div>
 
@@ -79,7 +96,7 @@
                     <mat-list-item>
                         <mat-icon matListItemIcon  class="up-block-ico">safety_check</mat-icon>
                         <div matListItemTitle>Etat de conservation</div>
-                        <div matListItemLine> <span *ngFor="let etat of detailInfos.etats_conservation">{{etat}}</span> </div>
+                        <div matListItemLine> <span *ngFor="let etat of detailInfos.etats_conservation">{{etat}} </span> </div>
                     </mat-list-item>
                       
                     <mat-list-item>

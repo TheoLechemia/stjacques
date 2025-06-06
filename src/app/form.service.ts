@@ -26,7 +26,7 @@ export class FormService {
         etats_conservation: [[]],
       }),
       mobiliers_images: this._formBuilder.group({
-        designations: [[]],
+        natures: [[]],
         techniques: [[]],
         etats_conservation: [[]],
       }),

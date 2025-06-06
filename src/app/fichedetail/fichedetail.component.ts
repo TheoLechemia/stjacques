@@ -62,6 +62,7 @@ export class FichedetailComponent implements OnInit {
     mobiliers_images: [
       {"key": "bibliographie", "label": "Bibliographie"},
       {"key": "source", "label": "Source"},
+      {"key": "techniques", "label": "Techniques"},
     ],
     personnes_morales: [
       {"key": "bibliographie", "label": "Bibliographie"},
