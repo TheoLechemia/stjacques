@@ -86,7 +86,7 @@
 </div>
 
  <!-- ### BLOC RANDOM ### -->
-<div class="container-fluid">
+<div *ngIf="config.DISPLAY_RANDOM_SEARCH" class="container-fluid">
   <div class="primary-bg-color px-3 pb-3" id="random-block">
     <h3 class="text-center py-3 white italic-title">Exemples de résultats de recherche générés aléatoirement</h3>
     <p class="mb-3 center">Les images ci-dessous présentent des résultats d’interrogations aléatoires de la base. Elles donnent une première idée des recherches personnalisées que chaque visiteur pourra faire.</p>
