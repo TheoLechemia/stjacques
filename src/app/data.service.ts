@@ -31,7 +31,7 @@ export class DataService {
   public searchingPersm = false;
   constructor(private api: ApiService, public formService: FormService) {
     this.api.getObjects('pays').subscribe((data) => {
-      this.pays = data;
+      this.pays = data.filter(d => d.name == "France");      
     });
     this.api.getObjects('regions').subscribe((data) => {
       this.regions = data;
