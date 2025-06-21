@@ -1,27 +1,34 @@
-# App
+# Installation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+Installer nvm sur votre machine https://github.com/nvm-sh/nvm 
+puis installer la version de npm défini dans le projet :
 
-## Development server
+::
+    # Depuis le répertoire racine de l'application
+    nvm install
+    nvm use
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Installer les dépendances frontend:
 
-## Code scaffolding
+::
+    npm install
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Désampler le fichier de configuration et le remplir:
 
-## Build
+::
+    cp src/config/config.json.sample src/config/config.json
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Le paramètre `INTERNAL_API_ENDPOINT` correspond  l'url de l'API
+Le paramtre `DISPLAY_RANDOM_SEARCH` permet d'afficher/masquer le bloc de recherche aléatorie de la page d'accueil.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+L'application est codé avec le framework Angular v16.
 
-## Running end-to-end tests
+## Lancer le serveur de développement
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Lancez `npm run start` pour lancer le serveur de développement : celui-ci sera disponible à l'addresse  `http://localhost:4200/`. Le navigateur se raffraichit automatiquement lors de modifications des fichiers sources
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Compilation
+
+Lancer `npm run build` pour compilier le projet. Le code déployable est compilé dans le répertoire `dist/`.

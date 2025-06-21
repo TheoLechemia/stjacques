@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from '../data.service';
 import { FormService } from '../form.service';
 import { ApiService } from '../api.service';
+import { AppConfigService } from '../app.config.service';
 
 @Component({
   selector: 'app-home',
@@ -14,21 +15,27 @@ export class HomeComponent implements OnInit {
   public mouseDown = false;
   startX: any;
   scrollLeft: any;
+  public config: any;
   constructor(
     public dataService: DataService,
     public formService: FormService,
-    private _api: ApiService
+    private _api: ApiService,
+    private _configService: AppConfigService,
+
   ) {}
   public randomCards: Array<any> = [];
   ngOnInit(): void {
-    this.loadRandom();
+    this.config = this._configService.config;
+    if(this.config.DISPLAY_RANDOM_SEARCH) {
+      this.loadRandom();
+    }
   }
 
   loadRandom() {
     this.randomCards = [];
     [
       ['monuments_lieux', 'natures'],
-      ['mobiliers_images', 'designations'],
+      ['mobiliers_images', 'natures'],
       ['personnes_morales', 'natures'],
       ['personnes_physiques', 'professions'],
     ].forEach((params: Array<any>) => {
@@ -39,7 +46,9 @@ export class HomeComponent implements OnInit {
           {
             limit: 3,
             random: 'true',
-            fields: ['medias', 'siecles', params[1]],
+            fields: ['medias', 'siecles',
+               //params[1] ? pas utilisé ?
+              ],
             has_medias: true,
           }
         )

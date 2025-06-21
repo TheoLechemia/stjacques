@@ -139,9 +139,9 @@
             <h5>Affiner votre recherche :</h5>
             <div class="row">
               <mat-form-field class="col-sm-6 col-xs-12">
-                <mat-label>Désignation</mat-label>
-                <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('designations')" multiple>
-                  <mat-option *ngFor="let item of dataService.designationsMob" [value]="item">{{item.name}}</mat-option>
+                <mat-label>Nature</mat-label>
+                <mat-select [formControl]="formService.form.get('mobiliers_images')?.get('natures')" multiple>
+                  <mat-option *ngFor="let item of dataService.naturesMob" [value]="item">{{item.name}}</mat-option>
                 </mat-select>
               </mat-form-field>
               <mat-form-field class="col-sm-6 col-xs-12">

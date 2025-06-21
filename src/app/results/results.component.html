@@ -41,8 +41,8 @@
         <b>Mobiliers & Images</b>
           <mat-card class="mb-3">
             <mat-card-content>
-              <div *ngIf="formData.mobiliers_images.designations.length > 0">
-                Désignations : <span *ngFor="let item of formData.mobiliers_images.designations" > {{item.name}}  </span>
+              <div *ngIf="formData.mobiliers_images.natures.length > 0">
+                Natures : <span *ngFor="let item of formData.mobiliers_images.natures" > {{item.name}}  </span>
               </div>
               <div *ngIf="formData.mobiliers_images.techniques.length > 0">
                 Techniques : <span *ngFor="let item of formData.mobiliers_images.techniques" > {{item.name}}  </span>
