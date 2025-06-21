@@ -49,7 +49,6 @@ export class FichedetailComponent implements OnInit {
       {"key": "attestation", "label": "Attestation"},
       {"key": "commutation_voeu", "label": "Communtation des voeux"},
       {"key": "elements_pelerinage", "label": "Eléments de pélerinage"},
-
     ],
   }
   // champs du tableau en bas
@@ -63,6 +62,7 @@ export class FichedetailComponent implements OnInit {
     mobiliers_images: [
       {"key": "bibliographie", "label": "Bibliographie"},
       {"key": "source", "label": "Source"},
+      {"key": "techniques", "label": "Techniques"},
     ],
     personnes_morales: [
       {"key": "bibliographie", "label": "Bibliographie"},
